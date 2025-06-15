@@ -17,7 +17,8 @@
     background-color: #fff;
     border-radius: 0.75rem;
     width: 100%;
-    max-width: 720px; /* wider modal */
+    max-width:720px; /* wider modal */
+    max-height: 90vh;
     padding: 0;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
     overflow: hidden;
