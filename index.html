@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSync - Develop Your Skills</title>
+  <script src="theme-loader.js"></script>
+  <link rel="stylesheet" href="home-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="landing-container">
+    <!-- Navigation -->
+    <header class="landing-header">
+      <div class="container">
+        <a href="home.html" class="logo-link">
+          <div class="logo">S</div>
+          <span class="logo-text">SkillSync</span>
+        </a>
+        
+        <nav class="landing-nav">
+          <a href="#courses" class="nav-link">Courses</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#communities" class="nav-link">Communities</a>
+          <a href="#about" class="nav-link">About</a>
+        </nav>
+        
+        <div class="auth-links">
+          <a href="login.html" class="login-link">Log in</a>
+          <a href="signup.html" class="signup-btn">Sign up</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="landing-main">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">Develop Your Skills with SkillSync</h1>
+              <p class="hero-description">
+                Access free courses, contribute to open-source projects, and join professional communities to
+                enhance your skills.
+              </p>
+              <div class="hero-buttons">
+                <a href="signup.html" class="primary-btn">
+                  Sign Up <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="explore.html" class="secondary-btn">Explore Opportunities</a>
+              </div>
+            </div>
+            <div class="hero-image">
+              <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/home/front.jpeg" alt="SkillSync Platform">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="feature-badge">Features</div>
+            <h2 class="section-title">Everything you need to grow your skills</h2>
+            <p class="section-description">
+              SkillSync provides a comprehensive platform for skill development through various learning
+              opportunities.
+            </p>
+          </div>
+          
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <h3 class="feature-title">Free Courses</h3>
+              <p class="feature-description">
+                Access a wide range of free courses to learn new skills at your own pace.
+              </p>
+              <ul class="feature-list">
+                <li>Self-paced learning</li>
+                <li>Expert-created content</li>
+                <li>Progress tracking</li>
+              </ul>
+              <a href="courses.html" class="feature-link">Browse Courses</a>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="feature-title">Open-Source Projects</h3>
+              <p class="feature-description">
+                Contribute to real-world projects and build your portfolio while learning.
+              </p>
+              <ul class="feature-list">
+                <li>Hands-on experience</li>
+                <li>Mentorship opportunities</li>
+                <li>Portfolio building</li>
+              </ul>
+              <a href="projects.html" class="feature-link">Explore Projects</a>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <h3 class="feature-title">Professional Communities</h3>
+              <p class="feature-description">
+                Connect with like-minded professionals and expand your network.
+              </p>
+              <ul class="feature-list">
+                <li>Networking opportunities</li>
+                <li>Knowledge sharing</li>
+                <li>Collaborative learning</li>
+              </ul>
+              <a href="communities.html" class="feature-link">Join Communities</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses Section -->
+      <section id="courses" class="courses-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Popular Courses</h2>
+            <p class="section-description">
+              Discover our most popular courses and start learning today.
+            </p>
+          </div>
+          
+          <div class="courses-grid">
+            <div class="course-card">
+              <div class="course-image">
+                <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/home/webDevelopmentFundamentals.jpg" alt="Web Development Fundamentals">
+              </div>
+              <div class="course-content">
+                <h3 class="course-title">Web Development Fundamentals</h3>
+                <p class="course-description">Learn the basics of HTML, CSS, and JavaScript.</p>
+                <div class="course-meta">
+                  <div class="course-level">
+                    <span class="meta-label">Level:</span>
+                    <span class="meta-value">Beginner</span>
+                  </div>
+                  <div class="course-duration">
+                    <span class="meta-label">Duration:</span>
+                    <span class="meta-value">4 weeks</span>
+                  </div>
+                </div>
+                <a href="course-detail.html" class="enroll-btn">Enroll Now</a>
+              </div>
+            </div>
+            
+            <div class="course-card">
+              <div class="course-image">
+                <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/home/Data-Science-Fir-beginner.png" alt="Data Science Essentials">
+              </div>
+              <div class="course-content">
+                <h3 class="course-title">Data Science Essentials</h3>
+                <p class="course-description">Introduction to data analysis and visualization.</p>
+                <div class="course-meta">
+                  <div class="course-level">
+                    <span class="meta-label">Level:</span>
+                    <span class="meta-value">Intermediate</span>
+                  </div>
+                  <div class="course-duration">
+                    <span class="meta-label">Duration:</span>
+                    <span class="meta-value">6 weeks</span>
+                  </div>
+                </div>
+                <a href="course-detail.html" class="enroll-btn">Enroll Now</a>
+              </div>
+            </div>
+            
+            <div class="course-card">
+              <div class="course-image">
+                <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/home/mobile-app-development-a-step-by-step-guide.jpg" alt="Mobile App Development">
+              </div>
+              <div class="course-content">
+                <h3 class="course-title">Mobile App Development</h3>
+                <p class="course-description">Build cross-platform mobile applications.</p>
+                <div class="course-meta">
+                  <div class="course-level">
+                    <span class="meta-label">Level:</span>
+                    <span class="meta-value">Intermediate</span>
+                  </div>
+                  <div class="course-duration">
+                    <span class="meta-label">Duration:</span>
+                    <span class="meta-value">8 weeks</span>
+                  </div>
+                </div>
+                <a href="course-detail.html" class="enroll-btn">Enroll Now</a>
+              </div>
+            </div>
+            
+            <div class="course-card">
+              <div class="course-image">
+                <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/home/The-Ultimate-UI-UX-Design-Guide-Principles-Processes-and-Best-Practices.webp" alt="UX/UI Design Principles">
+              </div>
+              <div class="course-content">
+                <h3 class="course-title">UX/UI Design Principles</h3>
+                <p class="course-description">Learn to create user-centered designs.</p>
+                <div class="course-meta">
+                  <div class="course-level">
+                    <span class="meta-label">Level:</span>
+                    <span class="meta-value">Beginner</span>
+                  </div>
+                  <div class="course-duration">
+                    <span class="meta-label">Duration:</span>
+                    <span class="meta-value">5 weeks</span>
+                  </div>
+                </div>
+                <a href="course-detail.html" class="enroll-btn">Enroll Now</a>
+              </div>
+            </div>
+            
+            <div class="course-card">
+              <div class="course-image">
+                <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/home/images.jpeg" alt="Cloud Computing">
+              </div>
+              <div class="course-content">
+                <h3 class="course-title">Cloud Computing</h3>
+                <p class="course-description">Master cloud infrastructure and deployment.</p>
+                <div class="course-meta">
+                  <div class="course-level">
+                    <span class="meta-label">Level:</span>
+                    <span class="meta-value">Advanced</span>
+                  </div>
+                  <div class="course-duration">
+                    <span class="meta-label">Duration:</span>
+                    <span class="meta-value">10 weeks</span>
+                  </div>
+                </div>
+                <a href="course-detail.html" class="enroll-btn">Enroll Now</a>
+              </div>
+            </div>
+            
+            <div class="course-card">
+              <div class="course-image">
+                <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/home/7acce66d40ec90c2d61987b409cbf850_XL.webp" alt="Cybersecurity Basics">
+              </div>
+              <div class="course-content">
+                <h3 class="course-title">Cybersecurity Basics</h3>
+                <p class="course-description">Understand fundamental security concepts.</p>
+                <div class="course-meta">
+                  <div class="course-level">
+                    <span class="meta-label">Level:</span>
+                    <span class="meta-value">Beginner</span>
+                  </div>
+                  <div class="course-duration">
+                    <span class="meta-label">Duration:</span>
+                    <span class="meta-value">6 weeks</span>
+                  </div>
+                </div>
+                <a href="course-detail.html" class="enroll-btn">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="view-all-container">
+            <a href="courses.html" class="view-all-btn">View All Courses</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-description">
+              Contribute to real-world projects and build your portfolio while learning from experienced developers.
+            </p>
+          </div>
+          
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-header">
+                <div class="project-type">Web App</div>
+                <div class="project-status open">Open</div>
+              </div>
+              <h3 class="project-title">E-commerce Platform</h3>
+              <p class="project-description">Build a modern e-commerce platform with React, Node.js, and MongoDB.</p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+              </div>
+              <div class="project-meta">
+                <div class="project-contributors">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="Contributor" class="contributor-avatar">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="Contributor" class="contributor-avatar">
+                  <span class="contributor-count">+4</span>
+                </div>
+                <div class="project-difficulty">
+                  <span class="meta-label">Difficulty:</span>
+                  <span class="meta-value">Intermediate</span>
+                </div>
+              </div>
+              <a href="projects.html" class="view-project-btn">View Project</a>
+            </div>
+            
+            <div class="project-card">
+              <div class="project-header">
+                <div class="project-type">Mobile App</div>
+                <div class="project-status open">Open</div>
+              </div>
+              <h3 class="project-title">Fitness Tracker</h3>
+              <p class="project-description">Develop a cross-platform fitness tracking app with React Native.</p>
+              <div class="project-tech">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Redux</span>
+              </div>
+              <div class="project-meta">
+                <div class="project-contributors">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="Contributor" class="contributor-avatar">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="Contributor" class="contributor-avatar">
+                  <span class="contributor-count">+2</span>
+                </div>
+                <div class="project-difficulty">
+                  <span class="meta-label">Difficulty:</span>
+                  <span class="meta-value">Advanced</span>
+                </div>
+              </div>
+              <a href="projects.html" class="view-project-btn">View Project</a>
+            </div>
+            
+            <div class="project-card">
+              <div class="project-header">
+                <div class="project-type">API</div>
+                <div class="project-status open">Open</div>
+              </div>
+              <h3 class="project-title">Weather API Service</h3>
+              <p class="project-description">Create a RESTful API for weather data aggregation and forecasting.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+              <div class="project-meta">
+                <div class="project-contributors">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="Contributor" class="contributor-avatar">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="Contributor" class="contributor-avatar">
+                  <span class="contributor-count">+5</span>
+                </div>
+                <div class="project-difficulty">
+                  <span class="meta-label">Difficulty:</span>
+                  <span class="meta-value">Beginner</span>
+                </div>
+              </div>
+              <a href="projects.html" class="view-project-btn">View Project</a>
+            </div>
+          </div>
+          
+          <div class="view-all-container">
+            <a href="projects.html" class="view-all-btn">View All Projects</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Communities Section -->
+      <section id="communities" class="communities-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Join Our Communities</h2>
+            <p class="section-description">
+              Connect with like-minded professionals, share knowledge, and grow together in our diverse communities.
+            </p>
+          </div>
+          
+          <div class="communities-grid">
+            <div class="community-card">
+              <div class="community-image">
+                <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/home/webdevcommunity.jpg" alt="Web Development Community">
+              </div>
+              <div class="community-content">
+                <h3 class="community-title">Web Development</h3>
+                <p class="community-description">Connect with frontend and backend developers to discuss the latest web technologies.</p>
+                <div class="community-meta">
+                  <div class="community-members">
+                    <i class="fa-solid fa-users"></i>
+                    <span>2,500+ members</span>
+                  </div>
+                  <div class="community-activity">
+                    <i class="fa-solid fa-message"></i>
+                    <span>Very active</span>
+                  </div>
+                </div>
+                <a href="communities.html" class="join-community-btn">Join Community</a>
+              </div>
+            </div>
+            
+            <div class="community-card">
+              <div class="community-image">
+                <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/home/datasciencecommunity.png" alt="Data Science Community">
+              </div>
+              <div class="community-content">
+                <h3 class="community-title">Data Science</h3>
+                <p class="community-description">Share insights, discuss algorithms, and collaborate on data science projects.</p>
+                <div class="community-meta">
+                  <div class="community-members">
+                    <i class="fa-solid fa-users"></i>
+                    <span>1,800+ members</span>
+                  </div>
+                  <div class="community-activity">
+                    <i class="fa-solid fa-message"></i>
+                    <span>Active</span>
+                  </div>
+                </div>
+                <a href="communities.html" class="join-community-btn">Join Community</a>
+              </div>
+            </div>
+            
+            <div class="community-card">
+              <div class="community-image">
+                <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/home/uiuxcommunity.jpeg" alt="UX Design Community">
+              </div>
+              <div class="community-content">
+                <h3 class="community-title">UI/UX Design</h3>
+                <p class="community-description">Exchange design ideas, get feedback, and stay updated on UI/UX trends.</p>
+                <div class="community-meta">
+                  <div class="community-members">
+                    <i class="fa-solid fa-users"></i>
+                    <span>1,200+ members</span>
+                  </div>
+                  <div class="community-activity">
+                    <i class="fa-solid fa-message"></i>
+                    <span>Very active</span>
+                  </div>
+                </div>
+                <a href="communities.html" class="join-community-btn">Join Community</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="view-all-container">
+            <a href="communities.html" class="view-all-btn">View All Communities</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">About SkillSync</h2>
+            <p class="section-description">
+              Learn more about our mission, values, and the team behind SkillSync.
+            </p>
+          </div>
+          
+          <div class="about-content">
+            <div class="about-image">
+              <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images//home/group-business-people-standing-togetherthe-concept-teamwork_252847-12287.avif" alt="SkillSync Team">
+            </div>
+            
+            <div class="about-text">
+              <h3 class="about-subtitle">Our Mission</h3>
+              <p>
+                At SkillSync, we believe that quality education should be accessible to everyone. Our mission is to provide a platform where individuals can develop their skills through free courses, contribute to real-world projects, and connect with like-minded professionals.
+              </p>
+              
+              <h3 class="about-subtitle">Our Values</h3>
+              <ul class="values-list">
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  <div>
+                    <h4>Accessibility</h4>
+                    <p>Making quality education accessible to everyone regardless of their background.</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  <div>
+                    <h4>Collaboration</h4>
+                    <p>Fostering a collaborative environment where knowledge is shared freely.</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  <div>
+                    <h4>Innovation</h4>
+                    <p>Continuously improving our platform to provide the best learning experience.</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  <div>
+                    <h4>Community</h4>
+                    <p>Building a supportive community that helps each member grow and succeed.</p>
+                  </div>
+                </li>
+              </ul>
+              
+              <a href="#" class="learn-more-btn">Learn More About Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <h2 class="cta-title">Ready to start your learning journey?</h2>
+          <p class="cta-description">
+            Join SkillSync today and unlock your potential with free courses, projects, and communities.
+          </p>
+          <div class="cta-buttons">
+            <a href="signup.html" class="cta-primary-btn">
+              Get Started <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#about" class="cta-secondary-btn">Learn More</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="landing-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="home.html" class="logo-link">
+              <div class="logo">S</div>
+              <span class="logo-text">SkillSync</span>
+            </a>
+            <p class="footer-description">
+              SkillSync is a platform that helps users develop skills through free courses, open-source projects, and
+              professional communities.
+            </p>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-column">
+              <h3 class="footer-heading">Platform</h3>
+              <ul class="footer-menu">
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#communities">Communities</a></li>
+                <li><a href="#about">About</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-column">
+              <h3 class="footer-heading">Resources</h3>
+              <ul class="footer-menu">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Guides</a></li>
+                <li><a href="#">Help Center</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-column">
+              <h3 class="footer-heading">Company</h3>
+              <ul class="footer-menu">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Partners</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-column">
+              <h3 class="footer-heading">Legal</h3>
+              <ul class="footer-menu">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; <span id="current-year">2023</span> SkillSync. All rights reserved.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-twitter"></i>
+              <span class="sr-only">Twitter</span>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-github"></i>
+              <span class="sr-only">GitHub</span>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-linkedin"></i>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Update current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const landingNav = document.querySelector('.landing-nav');
+    const authLinks = document.querySelector('.auth-links');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      landingNav.classList.toggle('active');
+      authLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

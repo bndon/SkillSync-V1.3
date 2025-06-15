@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSync - Help & Support</title>
+  <script src="theme-loader.js"></script>
+  <link rel="stylesheet" href="help-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <!-- Logo -->
+      <a href="index.html" class="logo-link">
+        <div class="logo">S</div>
+        <span>SkillSync</span>
+      </a>
+      
+      <nav class="main-nav">
+        <div class="nav-links">
+          <a href="dashboard.html" class="nav-link">
+            <i class="fa-solid fa-house nav-icon"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="courses.html" class="nav-link">
+            <i class="fa-solid fa-book nav-icon"></i>
+            <span>Courses</span>
+          </a>
+          <a href="communities.html" class="nav-link">
+            <i class="fa-solid fa-users nav-icon"></i>
+            <span>Communities</span>
+          </a>
+          <a href="explore.html" class="nav-link">
+            <i class="fa-solid fa-compass nav-icon"></i>
+            <span>Explore</span>
+          </a>
+        </div>
+      </nav>
+      
+      <div class="user-actions">
+        <button class="notification-btn">
+          <i class="fa-solid fa-bell notification-icon"></i>
+          <span class="notification-badge">3</span>
+          <span class="sr-only">Notifications</span>
+        </button>
+        
+        <div class="dropdown">
+          <div class="avatar dropdown-trigger">
+            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="User" class="avatar-image">
+          </div>
+          
+          <div class="dropdown-menu">
+            <div class="dropdown-label">
+              <div>Your Name</div>
+              <div class="dropdown-email">Name@example.com</div>
+            </div>
+            <div class="dropdown-separator"></div>
+            <a href="profile.html" class="dropdown-item">
+              <i class="fa-solid fa-user dropdown-icon"></i>
+              Profile
+            </a>
+            <a href="settings.html" class="dropdown-item">
+              <i class="fa-solid fa-gear dropdown-icon"></i>
+              Settings
+            </a>
+            <div class="dropdown-separator"></div>
+            <button class="dropdown-item">
+              <i class="fa-solid fa-right-from-bracket dropdown-icon"></i>
+              Log out
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar"> 
+        <nav class="sidebar-nav">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Menu</h3>
+            <div class="sidebar-items">
+              <a href="dashboard.html" class="sidebar-item">
+                <i class="fa-solid fa-house sidebar-icon"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="courses.html" class="sidebar-item">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                <span>Courses</span>
+              </a>
+              <a href="communities.html" class="sidebar-item">
+                <i class="fa-solid fa-users sidebar-icon"></i>
+                <span>Communities</span>
+              </a>
+              <a href="messages.html" class="sidebar-item">
+                <i class="fa-solid fa-message sidebar-icon"></i>
+                <span>Messages</span>
+                <span class="sidebar-badge">5</span>
+              </a>
+              <a href="projects.html" class="sidebar-item">
+                <i class="fa-solid fa-code sidebar-icon"></i>
+                <span>Projects</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Discover</h3>
+            <div class="sidebar-items">
+              <a href="explore.html" class="sidebar-item">
+                <i class="fa-solid fa-compass sidebar-icon"></i>
+                <span>Explore</span>
+              </a>
+              <a href="achievements.html" class="sidebar-item">
+                <i class="fa-solid fa-star sidebar-icon"></i>
+                <span>Achievements</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Account</h3>
+            <div class="sidebar-items">
+              <a href="profile.html" class="sidebar-item">
+                <i class="fa-solid fa-user sidebar-icon"></i>
+                <span>Profile</span>
+              </a>
+              <a href="settings.html" class="sidebar-item">
+                <i class="fa-solid fa-gear sidebar-icon"></i>
+                <span>Settings</span>
+              </a>
+              <a href="help.html" class="sidebar-item active">
+                <i class="fa-solid fa-circle-question sidebar-icon"></i>
+                <span>Help & Support</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="sidebar-footer">
+          <button class="sidebar-collapse-btn" id="sidebar-toggle-visibility">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span class="sr-only">Collapse Sidebar</span>
+          </button>
+        </div>
+      </aside>
+      
+      <!-- Help Content -->
+      <main class="page-main">
+        <div class="page-header">
+          <h1 class="page-title">Help & Support</h1>
+          <p class="page-description">Find answers to your questions and get support</p>
+        </div>
+        
+        <div class="help-container">
+          <div class="help-search">
+            <form class="help-search-form" id="help-search-form">
+              <i class="fa-solid fa-search help-search-icon"></i>
+              <input type="search" placeholder="Search for help..." class="help-search-input" id="help-search-input">
+              <button type="submit" class="help-search-btn">Search</button>
+            </form>
+            <div class="search-results" id="search-results" style="display: none;">
+              <div class="search-results-header">
+                <h3>Search Results</h3>
+                <button class="close-search-btn" id="close-search-btn">
+                  <i class="fa-solid fa-times"></i>
+                </button>
+              </div>
+              <div class="search-results-content" id="search-results-content">
+                <!-- Search results will be populated here -->
+              </div>
+            </div>
+          </div>
+          
+          <div class="help-categories" id="help-categories">
+            <div class="help-category" data-category="getting-started">
+              <div class="help-category-icon">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <h3 class="help-category-title">Getting Started</h3>
+              <p class="help-category-description">Learn the basics of using SkillSync</p>
+              <button class="help-category-link" data-guides="getting-started">View Guides</button>
+            </div>
+            
+            <div class="help-category" data-category="courses">
+              <div class="help-category-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3 class="help-category-title">Courses</h3>
+              <p class="help-category-description">How to enroll, complete, and track courses</p>
+              <button class="help-category-link" data-guides="courses">View Guides</button>
+            </div>
+            
+            <div class="help-category" data-category="communities">
+              <div class="help-category-icon">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <h3 class="help-category-title">Communities</h3>
+              <p class="help-category-description">Join and participate in learning communities</p>
+              <button class="help-category-link" data-guides="communities">View Guides</button>
+            </div>
+            
+            <div class="help-category" data-category="billing">
+              <div class="help-category-icon">
+                <i class="fa-solid fa-credit-card"></i>
+              </div>
+              <h3 class="help-category-title">Billing</h3>
+              <p class="help-category-description">Manage your subscription and payments</p>
+              <button class="help-category-link" data-guides="billing">View Guides</button>
+            </div>
+            
+            <div class="help-category" data-category="security">
+              <div class="help-category-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3 class="help-category-title">Account & Security</h3>
+              <p class="help-category-description">Manage your account settings and security</p>
+              <button class="help-category-link" data-guides="security">View Guides</button>
+            </div>
+            
+            <div class="help-category" data-category="certificates">
+              <div class="help-category-icon">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <h3 class="help-category-title">Certificates</h3>
+              <p class="help-category-description">How to earn and share your certificates</p>
+              <button class="help-category-link" data-guides="certificates">View Guides</button>
+            </div>
+          </div>
+          
+          <div class="help-sections">
+            <div class="help-section">
+              <h2 class="help-section-title">Frequently Asked Questions</h2>
+              
+              <div class="faq-list" id="faq-list">
+                <div class="faq-item" data-category="account">
+                  <div class="faq-question">
+                    <h3>How do I reset my password?</h3>
+                    <button class="faq-toggle">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>To reset your password, click on the "Forgot Password" link on the login page. Enter your email address, and we'll send you a link to reset your password. Follow the instructions in the email to create a new password.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item" data-category="courses">
+                  <div class="faq-question">
+                    <h3>How do I enroll in a course?</h3>
+                    <button class="faq-toggle">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>To enroll in a course, navigate to the course page and click the "Enroll" button. If the course is free, you'll be enrolled immediately. If it's a paid course, you'll be prompted to complete the payment process before enrollment.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item" data-category="progress">
+                  <div class="faq-question">
+                    <h3>How do I track my progress?</h3>
+                    <button class="faq-toggle">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>You can track your progress on the Dashboard page. It shows your enrolled courses, completion percentage, and upcoming deadlines. You can also view detailed progress for each course on the course page.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item" data-category="certificates">
+                  <div class="faq-question">
+                    <h3>How do I get a certificate?</h3>
+                    <button class="faq-toggle">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>Certificates are awarded automatically upon successful completion of a course. You can view and download your certificates from the "Certificates" section in your profile. You can also share them directly to LinkedIn or other platforms.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item" data-category="billing">
+                  <div class="faq-question">
+                    <h3>How do I cancel my subscription?</h3>
+                    <button class="faq-toggle">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>To cancel your subscription, go to Settings > Billing > Current Plan and click "Change Plan". From there, select "Cancel Subscription". Your subscription will remain active until the end of the current billing period.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item" data-category="communities">
+                  <div class="faq-question">
+                    <h3>How do I join a community?</h3>
+                    <button class="faq-toggle">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>To join a community, go to the Communities page or Explore section, find a community you're interested in, and click the "Join" button. Some communities may require approval from moderators.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item" data-category="technical">
+                  <div class="faq-question">
+                    <h3>What browsers are supported?</h3>
+                    <button class="faq-toggle">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>SkillSync works best on modern browsers including Chrome, Firefox, Safari, and Edge. We recommend keeping your browser updated to the latest version for the best experience.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item" data-category="mobile">
+                  <div class="faq-question">
+                    <h3>Is there a mobile app?</h3>
+                    <button class="faq-toggle">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="faq-answer">
+                    <p>Currently, SkillSync is available as a web application that works great on mobile browsers. We're working on dedicated mobile apps for iOS and Android - stay tuned for updates!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="help-section">
+              <h2 class="help-section-title">Contact Support</h2>
+              
+              <div class="contact-options">
+                <div class="contact-option">
+                  <div class="contact-icon">
+                    <i class="fa-solid fa-comments"></i>
+                  </div>
+                  <h3 class="contact-title">Live Chat</h3>
+                  <p class="contact-description">Chat with our support team in real-time</p>
+                  <button class="btn primary-btn" id="start-chat-btn">Start Chat</button>
+                </div>
+                
+                <div class="contact-option">
+                  <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <h3 class="contact-title">Email Support</h3>
+                  <p class="contact-description">Get help via email within 24 hours</p>
+                  <button class="btn primary-btn" id="send-email-btn">Send Email</button>
+                </div>
+                
+                <div class="contact-option">
+                  <div class="contact-icon">
+                    <i class="fa-solid fa-ticket"></i>
+                  </div>
+                  <h3 class="contact-title">Submit a Ticket</h3>
+                  <p class="contact-description">Create a support ticket for complex issues</p>
+                  <button class="btn primary-btn" id="create-ticket-btn">Create Ticket</button>
+                </div>
+              </div>
+              
+              <div class="support-hours">
+                <h3>Support Hours</h3>
+                <p>Our support team is available Monday through Friday, 9:00 AM to 6:00 PM EST.</p>
+                <p>Weekend support is available for urgent issues only.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="help-community">
+            <h2 class="help-section-title">Community Support</h2>
+            <p class="help-section-description">Get help from other SkillSync users and share your knowledge</p>
+            
+            <div class="community-options">
+              <a href="#" class="community-option" id="discussion-forums-link">
+                <div class="community-icon">
+                  <i class="fa-solid fa-comments"></i>
+                </div>
+                <div class="community-content">
+                  <h3 class="community-title">Discussion Forums</h3>
+                  <p class="community-description">Ask questions and share insights with the SkillSync community</p>
+                </div>
+                <i class="fa-solid fa-chevron-right community-arrow"></i>
+              </a>
+              
+              <a href="#" class="community-option" id="discord-community-link">
+                <div class="community-icon">
+                  <i class="fa-brands fa-discord"></i>
+                </div>
+                <div class="community-content">
+                  <h3 class="community-title">Discord Community</h3>
+                  <p class="community-description">Join our Discord server for real-time discussions and support</p>
+                </div>
+                <i class="fa-solid fa-chevron-right community-arrow"></i>
+              </a>
+              
+              <a href="#" class="community-option" id="feature-requests-link">
+                <div class="community-icon">
+                  <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <div class="community-content">
+                  <h3 class="community-title">Feature Requests</h3>
+                  <p class="community-description">Suggest and vote on new features for SkillSync</p>
+                </div>
+                <i class="fa-solid fa-chevron-right community-arrow"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <!-- Live Chat Modal -->
+  <div class="modal-overlay" id="chat-modal-overlay">
+    <div class="modal chat-modal">
+      <div class="modal-header">
+        <h3>Live Chat Support</h3>
+        <button class="modal-close" id="close-chat-modal">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="chat-container">
+          <div class="chat-messages" id="chat-messages">
+            <div class="chat-message support-message">
+              <div class="message-avatar">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="message-sender">Support Agent</span>
+                  <span class="message-time">Just now</span>
+                </div>
+                <div class="message-text">Hello! How can I help you today?</div>
+              </div>
+            </div>
+          </div>
+          <div class="chat-input-container">
+            <input type="text" class="chat-input" id="chat-input" placeholder="Type your message...">
+            <button class="chat-send-btn" id="chat-send-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Email Support Modal -->
+  <div class="modal-overlay" id="email-modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Email Support</h3>
+        <button class="modal-close" id="close-email-modal">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="support-form" id="email-support-form">
+          <div class="form-group">
+            <label for="email-subject">Subject</label>
+            <input type="text" id="email-subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="email-category">Category</label>
+            <select id="email-category" name="category" required>
+              <option value="">Select a category</option>
+              <option value="account">Account Issues</option>
+              <option value="billing">Billing & Payments</option>
+              <option value="courses">Course Related</option>
+              <option value="technical">Technical Issues</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="email-message">Message</label>
+            <textarea id="email-message" name="message" rows="6" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn secondary-btn" id="cancel-email-btn">Cancel</button>
+            <button type="submit" class="btn primary-btn">Send Email</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticket Modal -->
+  <div class="modal-overlay" id="ticket-modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Create Support Ticket</h3>
+        <button class="modal-close" id="close-ticket-modal">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="support-form" id="ticket-form">
+          <div class="form-group">
+            <label for="ticket-title">Ticket Title</label>
+            <input type="text" id="ticket-title" name="title" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ticket-priority">Priority</label>
+              <select id="ticket-priority" name="priority" required>
+                <option value="">Select priority</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                <option value="urgent">Urgent</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="ticket-category">Category</label>
+              <select id="ticket-category" name="category" required>
+                <option value="">Select category</option>
+                <option value="account">Account Issues</option>
+                <option value="billing">Billing & Payments</option>
+                <option value="courses">Course Related</option>
+                <option value="technical">Technical Issues</option>
+                <option value="feature">Feature Request</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ticket-description">Description</label>
+            <textarea id="ticket-description" name="description" rows="6" required placeholder="Please provide detailed information about your issue..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="ticket-attachment">Attachment (optional)</label>
+            <input type="file" id="ticket-attachment" name="attachment" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+            <small class="form-help">Supported formats: JPG, PNG, PDF, DOC, DOCX (Max 10MB)</small>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn secondary-btn" id="cancel-ticket-btn">Cancel</button>
+            <button type="submit" class="btn primary-btn">Create Ticket</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Guides Modal -->
+  <div class="modal-overlay" id="guides-modal-overlay">
+    <div class="modal large-modal">
+      <div class="modal-header">
+        <h3 id="guides-modal-title">Help Guides</h3>
+        <button class="modal-close" id="close-guides-modal">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="guides-content" id="guides-content">
+          <!-- Guides content will be populated here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="toast-icon fa-solid fa-check-circle"></i>
+      <span class="toast-message"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="help-script.js"></script>
+</body>
+</html>

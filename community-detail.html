@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSync - Frontend Developers</title>
+    <script src="theme-loader.js"></script>
+    <link rel="stylesheet" href="community-detail-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container" id="app">
+        <!-- Header -->
+        <header class="header">
+            <!-- Ini logo -->
+            <a href="index.html" class="logo-link">
+            <div class="logo">S</div>
+            <span>SkillSync</span>
+            </a>
+            
+            <nav class="main-nav">
+            <div class="nav-links">
+                <a href="dashboard.html" class="nav-link">
+                <i class="fa-solid fa-house nav-icon"></i>
+                <span>Dashboard</span>
+                </a>
+                <a href="courses.html" class="nav-link">
+                <i class="fa-solid fa-book nav-icon"></i>
+                <span>Courses</span>
+                </a>
+                <a href="communities.html" class="nav-link">
+                <i class="fa-solid fa-users nav-icon"></i>
+                <span>Communities</span>
+                </a>
+                <a href="explore.html" class="nav-link">
+                <i class="fa-solid fa-compass nav-icon"></i>
+                <span>Explore</span>
+                </a>
+            </div>
+            </nav>
+            
+            <div class="user-actions">
+            <button class="notification-btn">
+                <i class="fa-solid fa-bell notification-icon"></i>
+                <span class="notification-badge">3</span>
+                <span class="sr-only">Notifications</span>
+            </button>
+            
+            <div class="dropdown">
+                <div class="avatar dropdown-trigger">
+                <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="User" class="avatar-image">
+                </div>
+                
+                <div class="dropdown-menu">
+                <div class="dropdown-label">
+                    <div>Your Name</div>
+                    <div class="dropdown-email">Name@example.com</div>
+                </div>
+                <div class="dropdown-separator"></div>
+                <a href="profile.html" class="dropdown-item">
+                    <i class="fa-solid fa-user dropdown-icon"></i>
+                    Profile
+                </a>
+                <a href="settings.html" class="dropdown-item">
+                    <i class="fa-solid fa-gear dropdown-icon"></i>
+                    Settings
+                </a>
+                <div class="dropdown-separator"></div>
+                <button class="dropdown-item">
+                    <i class="fa-solid fa-right-from-bracket dropdown-icon"></i>
+                    Log out
+                </button>
+                </div>
+            </div>
+            </div>
+        </header>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar"> 
+            <nav class="sidebar-nav">
+                <div class="sidebar-section">
+                <h3 class="sidebar-title">Menu</h3>
+                <div class="sidebar-items">
+                    <a href="dashboard.html" class="sidebar-item">
+                    <i class="fa-solid fa-house sidebar-icon"></i>
+                    <span>Dashboard</span>
+                    </a>
+                    <a href="courses.html" class="sidebar-item">
+                    <i class="fa-solid fa-book sidebar-icon"></i>
+                    <span>Courses</span>
+                    </a>
+                    <a href="communities.html" class="sidebar-item">
+                    <i class="fa-solid fa-users sidebar-icon"></i>
+                    <span>Communities</span>
+                    </a>
+                    <a href="messages.html" class="sidebar-item">
+                    <i class="fa-solid fa-message sidebar-icon"></i>
+                    <span>Messages</span>
+                    <span class="sidebar-badge">5</span>
+                    </a>
+                    <a href="projects.html" class="sidebar-item">
+                    <i class="fa-solid fa-code sidebar-icon"></i>
+                    <span>Projects</span>
+                    </a>
+                </div>
+                </div>
+                
+                <div class="sidebar-section">
+                <h3 class="sidebar-title">Discover</h3>
+                <div class="sidebar-items">
+                    <a href="explore.html" class="sidebar-item">
+                    <i class="fa-solid fa-compass sidebar-icon"></i>
+                    <span>Explore</span>
+                    </a>
+                    <a href="achievements.html" class="sidebar-item">
+                    <i class="fa-solid fa-star sidebar-icon"></i>
+                    <span>Achievements</span>
+                    </a>
+                </div>
+                </div>
+                
+                <div class="sidebar-section">
+                <h3 class="sidebar-title">Account</h3>
+                <div class="sidebar-items">
+                    <a href="profile.html" class="sidebar-item">
+                    <i class="fa-solid fa-user sidebar-icon"></i>
+                    <span>Profile</span>
+                    </a>
+                    <a href="settings.html" class="sidebar-item">
+                    <i class="fa-solid fa-gear sidebar-icon"></i>
+                    <span>Settings</span>
+                    </a>
+                    <a href="help.html" class="sidebar-item">
+                    <i class="fa-solid fa-circle-question sidebar-icon"></i>
+                    <span>Help & Support</span>
+                    </a>
+                </div>
+                </div>
+            </nav>
+            <!-- Buat sidebar jadi bs di toggle -->
+            <div class="sidebar-footer">
+                <button class="sidebar-collapse-btn" id="sidebar-toggle-visibility">
+                <i class="fa-solid fa-chevron-left"></i>
+                <span class="sr-only">Collapse Sidebar</span>
+                </button>
+            </div>
+            </aside>
+
+            <!-- Community Detail Content -->
+            <div class="community-detail-container">
+                <!-- Community Hero -->
+                <section class="community-hero">
+                    <div class="container">
+                        <div class="community-hero-content">
+                            <div class="community-breadcrumb">
+                                <a href="communities.html">My Communities</a>
+                                <i class="fas fa-chevron-right"></i>
+                                <span>Frontend Developers</span>
+                            </div>
+                            <div class="community-header">
+                                <div class="community-info">
+                                    <div class="community-avatar">
+                                        <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/communities/frontend.jpg" alt="Frontend Developers">
+                                    </div>
+                                    <div class="community-details">
+                                        <h1 class="community-title">Frontend Developers</h1>
+                                        <p class="community-description">
+                                            A vibrant community of frontend developers building beautiful interfaces, sharing best practices, 
+                                            and helping each other grow. From beginners to experts, everyone is welcome!
+                                        </p>
+                                        <div class="community-meta">
+                                            <div class="meta-item">
+                                                <i class="fas fa-users"></i>
+                                                <span>2,847 Members</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="fas fa-comments"></i>
+                                                <span>156 Discussions</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="fas fa-calendar"></i>
+                                                <span>Created Jan 2023</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="fas fa-chart-line"></i>
+                                                <span>Very Active</span>
+                                            </div>
+                                        </div>
+                                        <div class="community-tags">
+                                            <span class="tag">JavaScript</span>
+                                            <span class="tag">React</span>
+                                            <span class="tag">CSS</span>
+                                            <span class="tag">HTML</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="community-actions">
+                                    <button class="btn btn-primary" onclick="leaveCommunity()">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        Leave Community
+                                    </button>
+                                    <button class="btn btn-outline" onclick="shareCommunity()">
+                                        <i class="fas fa-share"></i>
+                                        Share
+                                    </button>
+                                    <button class="btn btn-outline" onclick="toggleFollow()">
+                                        <i class="fas fa-bell"></i>
+                                        <span id="followText">Following</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Community Content -->
+                <section class="community-content">
+                    <div class="container">
+                        <div class="content-grid">
+                            <!-- Main Content -->
+                            <div class="main-contentnav">
+                                <!-- Community Navigation -->
+                                <div class="community-nav">
+                                    <button class="nav-tab active" data-tab="discussions" onclick="switchTab('discussions')">
+                                        <i class="fas fa-comments"></i>
+                                        Discussions
+                                    </button>
+                                    <button class="nav-tab" data-tab="events" onclick="switchTab('events')">
+                                        <i class="fas fa-calendar"></i>
+                                        Events
+                                    </button>
+                                    <button class="nav-tab" data-tab="projects" onclick="switchTab('projects')">
+                                        <i class="fas fa-code"></i>
+                                        Projects
+                                    </button>
+                                    <button class="nav-tab" data-tab="resources" onclick="switchTab('resources')">
+                                        <i class="fas fa-book"></i>
+                                        Resources
+                                    </button>
+                                </div>
+
+                                <!-- Discussions Tab -->
+                                <div class="tab-content active" id="discussions">
+                                    <div class="content-section">
+                                        <div class="section-header">
+                                            <h2 class="section-title">Recent Discussions</h2>
+                                            <button class="btn btn-primary" onclick="createNewDiscussion()">
+                                                <i class="fas fa-plus"></i>
+                                                New Discussion
+                                            </button>
+                                        </div>
+                                        <div class="discussions-list">
+                                            <div class="discussion-item" onclick="openDiscussion('react-state-management')">
+                                                <div class="discussion-avatar">
+                                                    <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icons.png" alt="User">
+                                                </div>
+                                                <div class="discussion-content">
+                                                    <div class="discussion-header">
+                                                        <h3 class="discussion-title">Best practices for React state management in 2024?</h3>
+                                                        <div class="discussion-meta">
+                                                            <span class="author">Sarah Chen</span>
+                                                            <span class="time">2 hours ago</span>
+                                                        </div>
+                                                    </div>
+                                                    <p class="discussion-preview">
+                                                        I'm working on a large React application and wondering what the community thinks 
+                                                        about the current state management solutions. Should I stick with Redux or...
+                                                    </p>
+                                                    <div class="discussion-stats">
+                                                        <span class="stat" onclick="likeDiscussion(event, 'react-state-management')">
+                                                            <i class="fas fa-thumbs-up"></i> 24
+                                                        </span>
+                                                        <span class="stat">
+                                                            <i class="fas fa-reply"></i> 12 replies
+                                                        </span>
+                                                        <span class="stat">
+                                                            <i class="fas fa-eye"></i> 156 views
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="discussion-item" onclick="openDiscussion('open-source-project')">
+                                                <div class="discussion-avatar">
+                                                    <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icons.png" alt="User">
+                                                </div>
+                                                <div class="discussion-content">
+                                                    <div class="discussion-header">
+                                                        <h3 class="discussion-title">Looking for collaborators on open-source project</h3>
+                                                        <div class="discussion-meta">
+                                                            <span class="author">Mike Johnson</span>
+                                                            <span class="time">5 hours ago</span>
+                                                        </div>
+                                                    </div>
+                                                    <p class="discussion-preview">
+                                                        I'm building a developer tools platform and looking for frontend and backend 
+                                                        developers to join the project. It's built with React, Node.js, and PostgreSQL...
+                                                    </p>
+                                                    <div class="discussion-stats">
+                                                        <span class="stat" onclick="likeDiscussion(event, 'open-source-project')">
+                                                            <i class="fas fa-thumbs-up"></i> 18
+                                                        </span>
+                                                        <span class="stat">
+                                                            <i class="fas fa-reply"></i> 8 replies
+                                                        </span>
+                                                        <span class="stat">
+                                                            <i class="fas fa-eye"></i> 89 views
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="discussion-item" onclick="openDiscussion('css-grid-flexbox')">
+                                                <div class="discussion-avatar">
+                                                    <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icons.png" alt="User">
+                                                </div>
+                                                <div class="discussion-content">
+                                                    <div class="discussion-header">
+                                                        <h3 class="discussion-title">CSS Grid vs Flexbox: When to use which?</h3>
+                                                        <div class="discussion-meta">
+                                                            <span class="author">Emily Davis</span>
+                                                            <span class="time">1 day ago</span>
+                                                        </div>
+                                                    </div>
+                                                    <p class="discussion-preview">
+                                                        I often find myself confused about when to use CSS Grid versus Flexbox. 
+                                                        Can someone explain the key differences and use cases for each?
+                                                    </p>
+                                                    <div class="discussion-stats">
+                                                        <span class="stat" onclick="likeDiscussion(event, 'css-grid-flexbox')">
+                                                            <i class="fas fa-thumbs-up"></i> 32
+                                                        </span>
+                                                        <span class="stat">
+                                                            <i class="fas fa-reply"></i> 15 replies
+                                                        </span>
+                                                        <span class="stat">
+                                                            <i class="fas fa-eye"></i> 234 views
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-outline btn-full" onclick="loadMoreDiscussions()">Load More Discussions</button>
+                                    </div>
+                                </div>
+
+                                <!-- Events Tab -->
+                                <div class="tab-content" id="events">
+                                    <div class="content-section">
+                                        <div class="section-header">
+                                            <h2 class="section-title">Upcoming Events</h2>
+                                            <button class="btn btn-primary" onclick="createEvent()">
+                                                <i class="fas fa-plus"></i>
+                                                Create Event
+                                            </button>
+                                        </div>
+                                        <div class="events-list">
+                                            <div class="event-item">
+                                                <div class="event-date">
+                                                    <div class="date-day">15</div>
+                                                    <div class="date-month">Dec</div>
+                                                </div>
+                                                <div class="event-content">
+                                                    <h3 class="event-title">React 18 Features Workshop</h3>
+                                                    <p class="event-description">
+                                                        Deep dive into React 18's new features including concurrent rendering, 
+                                                        automatic batching, and Suspense improvements.
+                                                    </p>
+                                                    <div class="event-meta">
+                                                        <span class="event-time">
+                                                            <i class="fas fa-clock"></i> 2:00 PM - 4:00 PM PST
+                                                        </span>
+                                                        <span class="event-attendees">
+                                                            <i class="fas fa-users"></i> 45 attending
+                                                        </span>
+                                                    </div>
+                                                    <div class="event-actions">
+                                                        <button class="btn btn-primary btn-sm" onclick="joinEvent('react-workshop')">Join Event</button>
+                                                        <button class="btn btn-outline btn-sm" onclick="addToCalendar('react-workshop')">Add to Calendar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="event-item">
+                                                <div class="event-date">
+                                                    <div class="date-day">22</div>
+                                                    <div class="date-month">Dec</div>
+                                                </div>
+                                                <div class="event-content">
+                                                    <h3 class="event-title">Code Review Session</h3>
+                                                    <p class="event-description">
+                                                        Weekly code review session where community members can get feedback 
+                                                        on their projects and learn from others.
+                                                    </p>
+                                                    <div class="event-meta">
+                                                        <span class="event-time">
+                                                            <i class="fas fa-clock"></i> 6:00 PM - 7:30 PM PST
+                                                        </span>
+                                                        <span class="event-attendees">
+                                                            <i class="fas fa-users"></i> 23 attending
+                                                        </span>
+                                                    </div>
+                                                    <div class="event-actions">
+                                                        <button class="btn btn-primary btn-sm" onclick="joinEvent('code-review')">Join Event</button>
+                                                        <button class="btn btn-outline btn-sm" onclick="addToCalendar('code-review')">Add to Calendar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Projects Tab -->
+                                <div class="tab-content" id="projects">
+                                    <div class="content-section">
+                                        <div class="section-header">
+                                            <h2 class="section-title">Community Projects</h2>
+                                            <button class="btn btn-primary" onclick="shareProject()">
+                                                <i class="fas fa-plus"></i>
+                                                Share Project
+                                            </button>
+                                        </div>
+                                        <div class="projects-grid">
+                                            <div class="project-card" onclick="viewProject('task-management')">
+                                                <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/communities/details/taskmanagement.png" alt="Project" class="project-image">
+                                                <div class="project-info">
+                                                    <h3 class="project-title">Task Management App</h3>
+                                                    <p class="project-description">
+                                                        A collaborative task management application built with React and Node.js.
+                                                    </p>
+                                                    <div class="project-tags">
+                                                        <span class="tag">React</span>
+                                                        <span class="tag">Node.js</span>
+                                                        <span class="tag">MongoDB</span>
+                                                    </div>
+                                                    <div class="project-stats">
+                                                        <span><i class="fas fa-star"></i> 4.8</span>
+                                                        <span><i class="fas fa-users"></i> 8 contributors</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="project-card" onclick="viewProject('weather-dashboard')">
+                                                <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/communities/details/weather.png" alt="Project" class="project-image">
+                                                <div class="project-info">
+                                                    <h3 class="project-title">Weather Dashboard</h3>
+                                                    <p class="project-description">
+                                                        Real-time weather dashboard with beautiful visualizations and forecasts.
+                                                    </p>
+                                                    <div class="project-tags">
+                                                        <span class="tag">Vue.js</span>
+                                                        <span class="tag">Chart.js</span>
+                                                        <span class="tag">API</span>
+                                                    </div>
+                                                    <div class="project-stats">
+                                                        <span><i class="fas fa-star"></i> 4.6</span>
+                                                        <span><i class="fas fa-users"></i> 5 contributors</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Resources Tab -->
+                                <div class="tab-content" id="resources">
+                                    <div class="content-section">
+                                        <div class="section-header">
+                                            <h2 class="section-title">Learning Resources</h2>
+                                            <button class="btn btn-primary" onclick="addResource()">
+                                                <i class="fas fa-plus"></i>
+                                                Add Resource
+                                            </button>
+                                        </div>
+                                        <div class="resources-list">
+                                            <div class="resource-item" onclick="openResource('javascript-guide')">
+                                                <div class="resource-icon">
+                                                    <i class="fas fa-book"></i>
+                                                </div>
+                                                <div class="resource-content">
+                                                    <h3 class="resource-title">JavaScript: The Definitive Guide</h3>
+                                                    <p class="resource-description">
+                                                        Comprehensive guide to JavaScript programming language and its ecosystem.
+                                                    </p>
+                                                    <div class="resource-meta">
+                                                        <span class="resource-type">Book</span>
+                                                        <span class="resource-rating">
+                                                            <i class="fas fa-star"></i> 4.7 (234 reviews)
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="resource-item" onclick="openResource('react-hooks')">
+                                                <div class="resource-icon">
+                                                    <i class="fas fa-video"></i>
+                                                </div>
+                                                <div class="resource-content">
+                                                    <h3 class="resource-title">React Hooks Masterclass</h3>
+                                                    <p class="resource-description">
+                                                        Complete video course covering all React hooks with practical examples.
+                                                    </p>
+                                                    <div class="resource-meta">
+                                                        <span class="resource-type">Video Course</span>
+                                                        <span class="resource-rating">
+                                                            <i class="fas fa-star"></i> 4.9 (156 reviews)
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="resource-item" onclick="openResource('css-grid')">
+                                                <div class="resource-icon">
+                                                    <i class="fas fa-link"></i>
+                                                </div>
+                                                <div class="resource-content">
+                                                    <h3 class="resource-title">CSS Grid Complete Guide</h3>
+                                                    <p class="resource-description">
+                                                        Interactive guide to CSS Grid with examples and browser support information.
+                                                    </p>
+                                                    <div class="resource-meta">
+                                                        <span class="resource-type">Article</span>
+                                                        <span class="resource-rating">
+                                                            <i class="fas fa-star"></i> 4.8 (89 reviews)
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sidebar -->
+                            <div class="sidebarc">
+                                <!-- Community Stats -->
+                                <div class="sidebarc-section">
+                                    <h3 class="sidebarc-title">Community Stats</h3>
+                                    <div class="stats-grid">
+                                        <div class="stat-item">
+                                            <div class="stat-value">2,847</div>
+                                            <div class="stat-label">Members</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">156</div>
+                                            <div class="stat-label">Discussions</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">89</div>
+                                            <div class="stat-label">Projects</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">45</div>
+                                            <div class="stat-label">Events</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Community Rules -->
+                                <div class="sidebarc-section">
+                                    <h3 class="sidebarc-title">Community Guidelines</h3>
+                                    <div class="rules-list">
+                                        <div class="rule-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Be respectful and professional</span>
+                                        </div>
+                                        <div class="rule-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Share knowledge and help others</span>
+                                        </div>
+                                        <div class="rule-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>No spam or self-promotion</span>
+                                        </div>
+                                        <div class="rule-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Use appropriate tags and categories</span>
+                                        </div>
+                                        <div class="rule-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Search before posting duplicates</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Active Members -->
+                                <div class="sidebarc-section">
+                                    <h3 class="sidebarc-title">Active Members</h3>
+                                    <div class="members-list">
+                                        <div class="member-item" onclick="viewProfile('sarah-chen')">
+                                            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icons.png" alt="Member" class="member-avatar">
+                                            <div class="member-info">
+                                                <h4 class="member-name">Sarah Chen</h4>
+                                                <p class="member-role">Community Moderator</p>
+                                            </div>
+                                            <div class="member-status online"></div>
+                                        </div>
+                                        <div class="member-item" onclick="viewProfile('mike-johnson')">
+                                            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icons.png" alt="Member" class="member-avatar">
+                                            <div class="member-info">
+                                                <h4 class="member-name">Mike Johnson</h4>
+                                                <p class="member-role">Senior Developer</p>
+                                            </div>
+                                            <div class="member-status online"></div>
+                                        </div>
+                                        <div class="member-item" onclick="viewProfile('emily-davis')">
+                                            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icons.png" alt="Member" class="member-avatar">
+                                            <div class="member-info">
+                                                <h4 class="member-name">Emily Davis</h4>
+                                                <p class="member-role">Frontend Specialist</p>
+                                            </div>
+                                            <div class="member-status away"></div>
+                                        </div>
+                                        <div class="member-item" onclick="viewProfile('alex-rodriguez')">
+                                            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icons.png" alt="Member" class="member-avatar">
+                                            <div class="member-info">
+                                                <h4 class="member-name">Alex Rodriguez</h4>
+                                                <p class="member-role">UI/UX Designer</p>
+                                            </div>
+                                            <div class="member-status offline"></div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-outline btn-full" onclick="viewAllMembers()">View All Members</button>
+                                </div>
+
+                                <!-- Related Communities -->
+                                <div class="sidebarc-section">
+                                    <h3 class="sidebarc-title">Related Communities</h3>
+                                    <div class="related-communities">
+                                        <a href="#" class="related-community" onclick="visitCommunity('react-developers')">
+                                            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icons.png" alt="Community">
+                                            <div class="community-info">
+                                                <h4>React Developers</h4>
+                                                <p>1,234 members</p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="related-community" onclick="visitCommunity('nodejs-community')">
+                                            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icons.png" alt="Community">
+                                            <div class="community-info">
+                                                <h4>Node.js Community</h4>
+                                                <p>2,156 members</p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="related-community" onclick="visitCommunity('css-masters')">
+                                            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icons.png" alt="Community">
+                                            <div class="community-info">
+                                                <h4>CSS Masters</h4>
+                                                <p>987 members</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="community-detail-script.js"></script>
+    <script>
+        const sidebar = document.querySelector('.sidebar');
+        const toggleBtn = document.querySelector('.sidebar-collapse-btn');
+      
+        toggleBtn.addEventListener('click', () => {
+          sidebar.classList.toggle('collapsed');
+        });
+      
+        // If you want to control visibility separately:
+        document.querySelector('#sidebar-toggle-visibility').addEventListener('click', () => {
+          sidebar.classList.toggle('visible');
+        });
+
+        // Community functionality
+        function switchTab(tabName) {
+            // Remove active class from all tabs and content
+            document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked tab and corresponding content
+            document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+
+        function leaveCommunity() {
+            if (confirm('Are you sure you want to leave this community?')) {
+                alert('You have left the Frontend Developers community.');
+                window.location.href = 'communities.html';
+            }
+        }
+
+        function shareCommunity() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Frontend Developers Community - SkillSync',
+                    text: 'Join this amazing frontend developers community!',
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Community link copied to clipboard!');
+            }
+        }
+
+        function toggleFollow() {
+            const followBtn = document.getElementById('followText');
+            const icon = followBtn.parentElement.querySelector('i');
+            
+            if (followBtn.textContent === 'Following') {
+                followBtn.textContent = 'Follow';
+                icon.classList.replace('fa-bell', 'fa-bell-slash');
+                alert('You are no longer following this community.');
+            } else {
+                followBtn.textContent = 'Following';
+                icon.classList.replace('fa-bell-slash', 'fa-bell');
+                alert('You are now following this community!');
+            }
+        }
+
+        function createNewDiscussion() {
+            alert('Create new discussion feature coming soon!');
+        }
+
+        function openDiscussion(discussionId) {
+            alert(`Opening discussion: ${discussionId}`);
+        }
+
+        function likeDiscussion(event, discussionId) {
+            event.stopPropagation();
+            const likeBtn = event.target.closest('.stat');
+            const currentLikes = parseInt(likeBtn.textContent.trim().split(' ')[1]);
+            likeBtn.innerHTML = `<i class="fas fa-thumbs-up"></i> ${currentLikes + 1}`;
+            alert('Discussion liked!');
+        }
+
+        function loadMoreDiscussions() {
+            alert('Loading more discussions...');
+        }
+
+        function createEvent() {
+            alert('Create event feature coming soon!');
+        }
+
+        function joinEvent(eventId) {
+            alert(`Joined event: ${eventId}`);
+        }
+
+        function addToCalendar(eventId) {
+            alert(`Added ${eventId} to calendar!`);
+        }
+
+        function shareProject() {
+            alert('Share project feature coming soon!');
+        }
+
+        function viewProject(projectId) {
+            alert(`Viewing project: ${projectId}`);
+        }
+
+        function addResource() {
+            alert('Add resource feature coming soon!');
+        }
+
+        function openResource(resourceId) {
+            alert(`Opening resource: ${resourceId}`);
+        }
+
+        function viewProfile(userId) {
+            alert(`Viewing profile: ${userId}`);
+        }
+
+        function viewAllMembers() {
+            alert('Viewing all members...');
+        }
+
+        function visitCommunity(communityId) {
+            alert(`Visiting community: ${communityId}`);
+        }
+    </script>
+</body>
+</html>

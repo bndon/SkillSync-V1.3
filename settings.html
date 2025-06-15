@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSync - Messages</title>
+  <script src="theme-loader.js"></script>
+  <link rel="stylesheet" href="settings-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <!-- Ini logo -->
+      <a href="index.html" class="logo-link">
+        <div class="logo">S</div>
+        <span>SkillSync</span>
+      </a>
+      
+      <nav class="main-nav">
+        <div class="nav-links">
+          <a href="dashboard.html" class="nav-link">
+            <i class="fa-solid fa-house nav-icon"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="courses.html" class="nav-link">
+            <i class="fa-solid fa-book nav-icon"></i>
+            <span>Courses</span>
+          </a>
+          <a href="communities.html" class="nav-link">
+            <i class="fa-solid fa-users nav-icon"></i>
+            <span>Communities</span>
+          </a>
+          <a href="explore.html" class="nav-link">
+            <i class="fa-solid fa-compass nav-icon"></i>
+            <span>Explore</span>
+          </a>
+        </div>
+      </nav>
+      
+      <div class="user-actions">
+        <button class="notification-btn">
+          <i class="fa-solid fa-bell notification-icon"></i>
+          <span class="notification-badge">3</span>
+          <span class="sr-only">Notifications</span>
+        </button>
+        
+        <div class="dropdown">
+          <div class="avatar dropdown-trigger">
+            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="User" class="avatar-image">
+          </div>
+          
+          <div class="dropdown-menu">
+            <div class="dropdown-label">
+              <div>Your Name</div>
+              <div class="dropdown-email">Name@example.com</div>
+            </div>
+            <div class="dropdown-separator"></div>
+            <a href="profile.html" class="dropdown-item">
+              <i class="fa-solid fa-user dropdown-icon"></i>
+              Profile
+            </a>
+            <a href="settings.html" class="dropdown-item">
+              <i class="fa-solid fa-gear dropdown-icon"></i>
+              Settings
+            </a>
+            <div class="dropdown-separator"></div>
+            <button class="dropdown-item">
+              <i class="fa-solid fa-right-from-bracket dropdown-icon"></i>
+              Log out
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar"> 
+        <nav class="sidebar-nav">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Menu</h3>
+            <div class="sidebar-items">
+              <a href="dashboard.html" class="sidebar-item">
+                <i class="fa-solid fa-house sidebar-icon"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="courses.html" class="sidebar-item">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                <span>Courses</span>
+              </a>
+              <a href="communities.html" class="sidebar-item">
+                <i class="fa-solid fa-users sidebar-icon"></i>
+                <span>Communities</span>
+              </a>
+              <a href="messages.html" class="sidebar-item">
+                <i class="fa-solid fa-message sidebar-icon"></i>
+                <span>Messages</span>
+                <span class="sidebar-badge">5</span>
+              </a>
+              <a href="projects.html" class="sidebar-item">
+                <i class="fa-solid fa-code sidebar-icon"></i>
+                <span>Projects</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Discover</h3>
+            <div class="sidebar-items">
+              <a href="explore.html" class="sidebar-item">
+                <i class="fa-solid fa-compass sidebar-icon"></i>
+                <span>Explore</span>
+              </a>
+              <a href="achievements.html" class="sidebar-item">
+                <i class="fa-solid fa-star sidebar-icon"></i>
+                <span>Achievements</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Account</h3>
+            <div class="sidebar-items">
+              <a href="profile.html" class="sidebar-item">
+                <i class="fa-solid fa-user sidebar-icon"></i>
+                <span>Profile</span>
+              </a>
+              <a href="settings.html" class="sidebar-item active">
+                <i class="fa-solid fa-gear sidebar-icon"></i>
+                <span>Settings</span>
+              </a>
+              <a href="help.html" class="sidebar-item">
+                <i class="fa-solid fa-circle-question sidebar-icon"></i>
+                <span>Help & Support</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+         <!-- Buat sidebar jadi bs di toggle -->
+        <div class="sidebar-footer">
+          <button class="sidebar-collapse-btn" id="sidebar-toggle-visibility">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span class="sr-only">Collapse Sidebar</span>
+          </button>
+        </div>
+      </aside>
+      
+     <!-- Settings Content -->
+     <main class="page-main">
+      <div class="page-header">
+        <h1 class="page-title">Settings</h1>
+        <p class="page-description">Manage your account settings and preferences</p>
+      </div>
+      
+      <div class="settings-container">
+        <div class="settings-sidebar">
+          <div class="settings-nav">
+            <a href="#account" class="settings-nav-item active">
+              <i class="fa-solid fa-user settings-nav-icon"></i>
+              Account
+            </a>
+            <a href="#profile" class="settings-nav-item">
+              <i class="fa-solid fa-id-card settings-nav-icon"></i>
+              Profile
+            </a>
+            <a href="#appearance" class="settings-nav-item">
+              <i class="fa-solid fa-palette settings-nav-icon"></i>
+              Appearance
+            </a>
+            <a href="#notifications" class="settings-nav-item">
+              <i class="fa-solid fa-bell settings-nav-icon"></i>
+              Notifications
+            </a>
+            <a href="#privacy" class="settings-nav-item">
+              <i class="fa-solid fa-lock settings-nav-icon"></i>
+              Privacy & Security
+            </a>
+            <!-- <a href="#billing" class="settings-nav-item">
+              <i class="fa-solid fa-credit-card settings-nav-icon"></i>
+              Billing
+            </a> -->
+            <a href="#integrations" class="settings-nav-item">
+              <i class="fa-solid fa-plug settings-nav-icon"></i>
+              Integrations
+            </a>
+          </div>
+        </div>
+        
+        <div class="settings-content">
+          <!-- Account Settings -->
+          <section id="account" class="settings-section active">
+            <h2 class="settings-title">Account Settings</h2>
+            
+            <form class="settings-form">
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" class="form-input" value="john@example.com">
+              </div>
+              
+              <div class="form-group">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" id="username" class="form-input" value="johndoe">
+              </div>
+              
+              <div class="form-divider"></div>
+              
+              <h3 class="settings-subtitle">Change Password</h3>
+              
+              <div class="form-group">
+                <label for="current-password" class="form-label">Current Password</label>
+                <input type="password" id="current-password" class="form-input">
+              </div>
+              
+              <div class="form-group">
+                <label for="new-password" class="form-label">New Password</label>
+                <input type="password" id="new-password" class="form-input">
+              </div>
+              
+              <div class="form-group">
+                <label for="confirm-password" class="form-label">Confirm New Password</label>
+                <input type="password" id="confirm-password" class="form-input">
+              </div>
+              
+              <div class="form-divider"></div>
+              
+              <h3 class="settings-subtitle">Danger Zone</h3>
+              
+              <div class="danger-zone">
+                <div class="danger-item">
+                  <div class="danger-info">
+                    <h4 class="danger-title">Deactivate Account</h4>
+                    <p class="danger-description">Temporarily disable your account. You can reactivate it anytime.</p>
+                  </div>
+                  <button type="button" class="btn danger-btn">Deactivate</button>
+                </div>
+                
+                <div class="danger-item">
+                  <div class="danger-info">
+                    <h4 class="danger-title">Delete Account</h4>
+                    <p class="danger-description">Permanently delete your account and all associated data. This action cannot be undone.</p>
+                  </div>
+                  <button type="button" class="btn danger-btn">Delete</button>
+                </div>
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="btn primary-btn">Save Changes</button>
+                <button type="reset" class="btn outline-btn">Cancel</button>
+              </div>
+            </form>
+          </section>
+          
+          <!-- Other settings sections would be here but hidden by default -->
+          <section id="profile" class="settings-section">
+            <h2 class="settings-title">Profile Settings</h2>
+            <form class="settings-form">
+              <div class="form-group">
+                <label class="form-label">Profile Picture</label>
+                <div class="profile-picture-upload">
+                  <div class="profile-picture">
+                    <img src="/Images/person-icon.png" alt="Profile" class="profile-image">
+                  </div>
+                  <div class="profile-picture-actions">
+                    <button type="button" class="btn outline-btn">Upload New</button>
+                    <button type="button" class="btn text-btn">Remove</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="full-name" class="form-label">Full Name</label>
+                <input type="text" id="full-name" class="form-input" value="John Doe">
+              </div>
+              
+              <div class="form-group">
+                <label for="bio" class="form-label">Bio</label>
+                <textarea id="bio" class="form-textarea" rows="4">Software developer with a passion for learning and teaching.</textarea>
+              </div>
+              
+              <div class="form-group">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" id="location" class="form-input" value="San Francisco, CA">
+              </div>
+              
+              <div class="form-group">
+                <label for="website" class="form-label">Website</label>
+                <input type="url" id="website" class="form-input" value="https://johndoe.com">
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="btn primary-btn">Save Changes</button>
+                <button type="reset" class="btn outline-btn">Cancel</button>
+              </div>
+            </form>
+          </section>
+          
+          <section id="appearance" class="settings-section">
+            <h2 class="settings-title">Appearance Settings</h2>
+            <form class="settings-form">
+              <div class="form-group">
+                <label class="form-label">Theme</label>
+                <div class="theme-options">
+                  <div class="theme-option">
+                    <input type="radio" name="theme" id="theme-light" />
+                    <label class="theme-label" for="theme-light">
+                      <div class="theme-preview light-theme"></div>
+                      <span>Light</span>
+                    </label>
+                  </div>
+                
+                  <div class="theme-option">
+                    <input type="radio" name="theme" id="theme-dark" />
+                    <label class="theme-label" for="theme-dark">
+                      <div class="theme-preview dark-theme"></div>
+                      <span>Dark</span>
+                    </label>
+                  </div>
+                
+                  <div class="theme-option">
+                    <input type="radio" name="theme" id="theme-system" />
+                    <label class="theme-label" for="theme-system">
+                      <div class="theme-preview system-theme"></div>
+                      <span>System</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label">Font Size</label>
+                <div class="font-size-slider">
+                  <span class="font-size-label small">A</span>
+                  <input type="range" min="1" max="5" value="3" class="slider" id="font-size-slider">
+                  <span class="font-size-label large">A</span>
+                </div>
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="btn primary-btn">Save Changes</button>
+                <button type="reset" class="btn outline-btn">Cancel</button>
+              </div>
+            </form>
+          </section>
+          
+          <section id="notifications" class="settings-section">
+            <h2 class="settings-title">Notification Settings</h2>
+            <form class="settings-form">
+              <div class="notification-group">
+                <h3 class="settings-subtitle">Email Notifications</h3>
+                
+                <div class="notification-option">
+                  <div class="notification-info">
+                    <h4 class="notification-title">Course Updates</h4>
+                    <p class="notification-description">Receive emails about new content in your enrolled courses.</p>
+                  </div>
+                  <label class="toggle">
+                    <input type="checkbox" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+                
+                <div class="notification-option">
+                  <div class="notification-info">
+                    <h4 class="notification-title">Community Activity</h4>
+                    <p class="notification-description">Receive emails about activity in your communities.</p>
+                  </div>
+                  <label class="toggle">
+                    <input type="checkbox" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+                
+                <div class="notification-option">
+                  <div class="notification-info">
+                    <h4 class="notification-title">Messages</h4>
+                    <p class="notification-description">Receive emails when you get new messages.</p>
+                  </div>
+                  <label class="toggle">
+                    <input type="checkbox">
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="notification-group">
+                <h3 class="settings-subtitle">Push Notifications</h3>
+                
+                <div class="notification-option">
+                  <div class="notification-info">
+                    <h4 class="notification-title">Course Reminders</h4>
+                    <p class="notification-description">Receive reminders about upcoming deadlines.</p>
+                  </div>
+                  <label class="toggle">
+                    <input type="checkbox" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+                
+                <div class="notification-option">
+                  <div class="notification-info">
+                    <h4 class="notification-title">New Achievements</h4>
+                    <p class="notification-description">Receive notifications when you earn new achievements.</p>
+                  </div>
+                  <label class="toggle">
+                    <input type="checkbox" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="btn primary-btn">Save Changes</button>
+                <button type="reset" class="btn outline-btn">Cancel</button>
+              </div>
+            </form>
+          </section>
+          
+          <section id="privacy" class="settings-section">
+            <h2 class="settings-title">Privacy & Security Settings</h2>
+            <form class="settings-form">
+              <div class="privacy-group">
+                <h3 class="settings-subtitle">Privacy</h3>
+                
+                <div class="form-group">
+                  <label class="form-label">Profile Visibility</label>
+                  <select class="form-select">
+                    <option value="public">Public - Anyone can view your profile</option>
+                    <option value="registered">Registered Users - Only registered users can view your profile</option>
+                    <option value="connections">Connections - Only your connections can view your profile</option>
+                    <option value="private">Private - Only you can view your profile</option>
+                  </select>
+                </div>
+                
+                <div class="notification-option">
+                  <div class="notification-info">
+                    <h4 class="notification-title">Show Learning Activity</h4>
+                    <p class="notification-description">Allow others to see your learning progress and achievements.</p>
+                  </div>
+                  <label class="toggle">
+                    <input type="checkbox" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="privacy-group">
+                <h3 class="settings-subtitle">Security</h3>
+                
+                <div class="notification-option">
+                  <div class="notification-info">
+                    <h4 class="notification-title">Two-Factor Authentication</h4>
+                    <p class="notification-description">Add an extra layer of security to your account.</p>
+                  </div>
+                  <label class="toggle">
+                    <input type="checkbox">
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+                
+                <div class="form-group">
+                  <button type="button" class="btn outline-btn">View Login History</button>
+                </div>
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="btn primary-btn">Save Changes</button>
+                <button type="reset" class="btn outline-btn">Cancel</button>
+              </div>
+            </form>
+          </section>
+          
+          <section id="integrations" class="settings-section">
+            <h2 class="settings-title">Integrations Settings</h2>
+            <div class="integrations-list">
+              <div class="integration-card">
+                <div class="integration-info">
+                  <div class="integration-icon github">
+                    <i class="fa-brands fa-github"></i>
+                  </div>
+                  <div class="integration-details">
+                    <h3 class="integration-name">GitHub</h3>
+                    <p class="integration-description">Connect your GitHub account to share your projects and repositories.</p>
+                  </div>
+                </div>
+                <div class="integration-status">
+                  <button class="btn outline-btn">Connect</button>
+                </div>
+              </div>
+              
+              <div class="integration-card">
+                <div class="integration-info">
+                  <div class="integration-icon google">
+                    <i class="fa-brands fa-google"></i>
+                  </div>
+                  <div class="integration-details">
+                    <h3 class="integration-name">Google</h3>
+                    <p class="integration-description">Connect your Google account for calendar integration and single sign-on.</p>
+                  </div>
+                </div>
+                <div class="integration-status connected">
+                  <span class="connected-label">Connected</span>
+                  <button class="btn text-btn text-danger">Disconnect</button>
+                </div>
+              </div>
+              
+              <div class="integration-card">
+                <div class="integration-info">
+                  <div class="integration-icon linkedin">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </div>
+                  <div class="integration-details">
+                    <h3 class="integration-name">LinkedIn</h3>
+                    <p class="integration-description">Connect your LinkedIn account to share your achievements and certificates.</p>
+                  </div>
+                </div>
+                <div class="integration-status">
+                  <button class="btn outline-btn">Connect</button>
+                </div>
+              </div>
+              
+              <div class="integration-card">
+                <div class="integration-info">
+                  <div class="integration-icon discord">
+                    <i class="fa-brands fa-discord"></i>
+                  </div>
+                  <div class="integration-details">
+                    <h3 class="integration-name">Discord</h3>
+                    <p class="integration-description">Connect your Discord account to join community servers and receive notifications.</p>
+                  </div>
+                </div>
+                <div class="integration-status">
+                  <button class="btn outline-btn">Connect</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="settings-script.js"></script>
+</body>
+</html>

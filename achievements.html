@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSync - Achievements</title>
+  <script src="theme-loader.js"></script>
+  <link rel="stylesheet" href="achievements-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <!-- Ini logo -->
+      <a href="index.html" class="logo-link">
+        <div class="logo">S</div>
+        <span>SkillSync</span>
+      </a>
+      
+      <nav class="main-nav">
+        <div class="nav-links">
+          <a href="dashboard.html" class="nav-link">
+            <i class="fa-solid fa-house nav-icon"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="courses.html" class="nav-link">
+            <i class="fa-solid fa-book nav-icon"></i>
+            <span>Courses</span>
+          </a>
+          <a href="communities.html" class="nav-link">
+            <i class="fa-solid fa-users nav-icon"></i>
+            <span>Communities</span>
+          </a>
+          <a href="explore.html" class="nav-link">
+            <i class="fa-solid fa-compass nav-icon"></i>
+            <span>Explore</span>
+          </a>
+        </div>
+      </nav>
+      
+      <div class="user-actions">
+        <button class="notification-btn">
+          <i class="fa-solid fa-bell notification-icon"></i>
+          <span class="notification-badge">3</span>
+          <span class="sr-only">Notifications</span>
+        </button>
+        
+        <div class="dropdown">
+          <div class="avatar dropdown-trigger">
+            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="User" class="avatar-image">
+          </div>
+          
+          <div class="dropdown-menu">
+            <div class="dropdown-label">
+              <div>Your Name</div>
+              <div class="dropdown-email">Name@example.com</div>
+            </div>
+            <div class="dropdown-separator"></div>
+            <a href="profile.html" class="dropdown-item">
+              <i class="fa-solid fa-user dropdown-icon"></i>
+              Profile
+            </a>
+            <a href="settings.html" class="dropdown-item">
+              <i class="fa-solid fa-gear dropdown-icon"></i>
+              Settings
+            </a>
+            <div class="dropdown-separator"></div>
+            <button class="dropdown-item">
+              <i class="fa-solid fa-right-from-bracket dropdown-icon"></i>
+              Log out
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar"> 
+        <nav class="sidebar-nav">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Menu</h3>
+            <div class="sidebar-items">
+              <a href="dashboard.html" class="sidebar-item">
+                <i class="fa-solid fa-house sidebar-icon"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="courses.html" class="sidebar-item">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                <span>Courses</span>
+              </a>
+              <a href="communities.html" class="sidebar-item">
+                <i class="fa-solid fa-users sidebar-icon"></i>
+                <span>Communities</span>
+              </a>
+              <a href="messages.html" class="sidebar-item">
+                <i class="fa-solid fa-message sidebar-icon"></i>
+                <span>Messages</span>
+                <span class="sidebar-badge">5</span>
+              </a>
+              <a href="projects.html" class="sidebar-item">
+                <i class="fa-solid fa-code sidebar-icon"></i>
+                <span>Projects</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Discover</h3>
+            <div class="sidebar-items">
+              <a href="explore.html" class="sidebar-item">
+                <i class="fa-solid fa-compass sidebar-icon"></i>
+                <span>Explore</span>
+              </a>
+              <a href="achievements.html" class="sidebar-item active">
+                <i class="fa-solid fa-star sidebar-icon"></i>
+                <span>Achievements</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Account</h3>
+            <div class="sidebar-items">
+              <a href="profile.html" class="sidebar-item">
+                <i class="fa-solid fa-user sidebar-icon"></i>
+                <span>Profile</span>
+              </a>
+              <a href="settings.html" class="sidebar-item">
+                <i class="fa-solid fa-gear sidebar-icon"></i>
+                <span>Settings</span>
+              </a>
+              <a href="help.html" class="sidebar-item">
+                <i class="fa-solid fa-circle-question sidebar-icon"></i>
+                <span>Help & Support</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+         <!-- Buat sidebar jadi bs di toggle -->
+        <div class="sidebar-footer">
+          <button class="sidebar-collapse-btn" id="sidebar-toggle-visibility">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span class="sr-only">Collapse Sidebar</span>
+          </button>
+        </div>
+      </aside>
+      
+      <!-- Achievements Content -->
+      <main class="page-main">
+        <div class="page-header">
+          <h1 class="page-title">Achievements</h1>
+          <div class="page-actions">
+            <select class="filter-select">
+              <option value="all">All Categories</option>
+              <option value="courses">Courses</option>
+              <option value="projects">Projects</option>
+              <option value="community">Community</option>
+              <option value="skills">Skills</option>
+            </select>
+            <button class="share-btn" id="share-achievements">
+              <i class="fa-solid fa-share"></i>
+              Share Achievements
+            </button>
+          </div>
+        </div>
+        
+        <div class="achievements-layout">
+          <div class="achievements-main">
+            <div class="achievements-section">
+              <h2 class="section-title">Your Achievements</h2>
+              
+              <div class="achievements-list">
+                <div class="achievement-card earned" data-category="courses">
+                  <div class="achievement-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div class="achievement-check">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+                  <div class="achievement-content">
+                    <div class="achievement-header">
+                      <h3 class="achievement-title">Course Completion: JavaScript Fundamentals</h3>
+                      <div class="achievement-points">
+                        <i class="fa-solid fa-award"></i>
+                        100 pts
+                      </div>
+                    </div>
+                    <p class="achievement-description">Successfully completed the JavaScript Fundamentals course with a score of 95%</p>
+                    <div class="achievement-date">
+                      <i class="fa-solid fa-calendar"></i>
+                      Earned on May 15, 2023
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="achievement-card earned" data-category="projects">
+                  <div class="achievement-icon">
+                    <i class="fa-solid fa-code"></i>
+                    <div class="achievement-check">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+                  <div class="achievement-content">
+                    <div class="achievement-header">
+                      <h3 class="achievement-title">Project Excellence: Portfolio Website</h3>
+                      <div class="achievement-points">
+                        <i class="fa-solid fa-award"></i>
+                        150 pts
+                      </div>
+                    </div>
+                    <p class="achievement-description">Created an outstanding portfolio website that showcases professional skills and projects</p>
+                    <div class="achievement-date">
+                      <i class="fa-solid fa-calendar"></i>
+                      Earned on June 2, 2023
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="achievement-card earned" data-category="community">
+                  <div class="achievement-icon">
+                    <i class="fa-solid fa-users"></i>
+                    <div class="achievement-check">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+                  <div class="achievement-content">
+                    <div class="achievement-header">
+                      <h3 class="achievement-title">Community Contributor</h3>
+                      <div class="achievement-points">
+                        <i class="fa-solid fa-award"></i>
+                        75 pts
+                      </div>
+                    </div>
+                    <p class="achievement-description">Helped 25+ community members by answering questions and providing guidance</p>
+                    <div class="achievement-date">
+                      <i class="fa-solid fa-calendar"></i>
+                      Earned on July 10, 2023
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="achievement-card earned" data-category="skills">
+                  <div class="achievement-icon">
+                    <i class="fa-brands fa-react"></i>
+                    <div class="achievement-check">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+                  <div class="achievement-content">
+                    <div class="achievement-header">
+                      <h3 class="achievement-title">Skill Mastery: React.js</h3>
+                      <div class="achievement-points">
+                        <i class="fa-solid fa-award"></i>
+                        200 pts
+                      </div>
+                    </div>
+                    <p class="achievement-description">Demonstrated advanced proficiency in React.js through projects and assessments</p>
+                    <div class="achievement-date">
+                      <i class="fa-solid fa-calendar"></i>
+                      Earned on August 5, 2023
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="achievement-card earned">
+                  <div class="achievement-icon">
+                    <i class="fa-solid fa-fire"></i>
+                    <div class="achievement-check">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+                  <div class="achievement-content">
+                    <div class="achievement-header">
+                      <h3 class="achievement-title">Learning Streak: 30 Days</h3>
+                      <div class="achievement-points">
+                        <i class="fa-solid fa-award"></i>
+                        50 pts
+                      </div>
+                    </div>
+                    <p class="achievement-description">Maintained consistent learning activity for 30 consecutive days</p>
+                    <div class="achievement-date">
+                      <i class="fa-solid fa-calendar"></i>
+                      Earned on September 1, 2023
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="achievement-card locked">
+                  <div class="achievement-icon">
+                    <i class="fa-solid fa-lock"></i>
+                  </div>
+                  <div class="achievement-content">
+                    <div class="achievement-header">
+                      <h3 class="achievement-title">Full-Stack Developer</h3>
+                      <div class="achievement-points">
+                        <i class="fa-solid fa-award"></i>
+                        500 pts
+                      </div>
+                    </div>
+                    <p class="achievement-description">Complete all required courses and projects in the Full-Stack Development track</p>
+                    <div class="achievement-requirements">
+                      <button class="view-requirements-btn">View Requirements</button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="achievement-card locked">
+                  <div class="achievement-icon">
+                    <i class="fa-solid fa-lock"></i>
+                  </div>
+                  <div class="achievement-content">
+                    <div class="achievement-header">
+                      <h3 class="achievement-title">Mentor</h3>
+                      <div class="achievement-points">
+                        <i class="fa-solid fa-award"></i>
+                        300 pts
+                      </div>
+                    </div>
+                    <p class="achievement-description">Help 50+ community members and maintain a 4.8+ rating</p>
+                    <div class="achievement-requirements">
+                      <button class="view-requirements-btn">View Requirements</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="achievements-sidebar">
+            <div class="progress-card">
+              <h3 class="card-title">Progress Summary</h3>
+              <div class="progress-stats">
+                <div class="stat-item">
+                  <div class="stat-value">15</div>
+                  <div class="stat-label">Total Achievements</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">875</div>
+                  <div class="stat-label">Points Earned</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">Intermediate</div>
+                  <div class="stat-label">Current Level</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">1200</div>
+                  <div class="stat-label">Next Level (pts)</div>
+                </div>
+              </div>
+              
+              <div class="level-progress">
+                <div class="level-progress-header">
+                  <span>Level Progress</span>
+                  <span>73%</span>
+                </div>
+                <div class="progress-bar-container">
+                  <div class="progress-bar" style="width: 73%"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="progress-card">
+              <h3 class="card-title">Category Progress</h3>
+              <div class="category-progress">
+                <div class="progress-item">
+                  <div class="progress-header">
+                    <span>Courses</span>
+                    <span>70%</span>
+                  </div>
+                  <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 70%"></div>
+                  </div>
+                </div>
+                
+                <div class="progress-item">
+                  <div class="progress-header">
+                    <span>Projects</span>
+                    <span>50%</span>
+                  </div>
+                  <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 50%"></div>
+                  </div>
+                </div>
+                
+                <div class="progress-item">
+                  <div class="progress-header">
+                    <span>Community</span>
+                    <span>60%</span>
+                  </div>
+                  <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 60%"></div>
+                  </div>
+                </div>
+                
+                <div class="progress-item">
+                  <div class="progress-header">
+                    <span>Skills</span>
+                    <span>40%</span>
+                  </div>
+                  <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 40%"></div>
+                  </div>
+                </div>
+                
+                <div class="progress-item">
+                  <div class="progress-header">
+                    <span>Engagement</span>
+                    <span>80%</span>
+                  </div>
+                  <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 80%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="progress-card">
+              <h3 class="card-title">Top Badges</h3>
+              <div class="badges-list">
+                <div class="badge-item">
+                  <div class="badge-icon gold">
+                    <i class="fa-solid fa-trophy"></i>
+                  </div>
+                  <div class="badge-info">
+                    <h4 class="badge-title">Course Master</h4>
+                    <p class="badge-level">Gold Badge</p>
+                  </div>
+                </div>
+                
+                <div class="badge-item">
+                  <div class="badge-icon silver">
+                    <i class="fa-solid fa-medal"></i>
+                  </div>
+                  <div class="badge-info">
+                    <h4 class="badge-title">Project Expert</h4>
+                    <p class="badge-level">Silver Badge</p>
+                  </div>
+                </div>
+                
+                <div class="badge-item">
+                  <div class="badge-icon bronze">
+                    <i class="fa-solid fa-award"></i>
+                  </div>
+                  <div class="badge-info">
+                    <h4 class="badge-title">Community Helper</h4>
+                    <p class="badge-level">Bronze Badge</p>
+                  </div>
+                </div>
+              </div>
+              <button class="view-all-btn">View All Badges</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.sidebar-collapse-btn');
+  
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  
+    document.querySelector('#sidebar-toggle-visibility').addEventListener('click', () => {
+      sidebar.classList.toggle('visible');
+    });
+  </script>
+  <script>
+    const filterSelect = document.querySelector('.filter-select');
+    const achievementCards = document.querySelectorAll('.achievement-card');
+
+    filterSelect.addEventListener('change', () => {
+      const selected = filterSelect.value;
+
+      achievementCards.forEach(card => {
+        const category = card.dataset.category;
+
+        if (selected === 'all' || category === selected) {
+          // Prepare hidden cards before showing
+          card.classList.add('pre-hidden');
+          card.classList.remove('hidden'); // ensures it's not `display: none`
+          card.style.display = 'flex';
+
+          // Wait one frame, then animate in
+          requestAnimationFrame(() => {
+            card.classList.remove('pre-hidden');
+          });
+
+        } else {
+          // Animate out first
+          card.classList.add('pre-hidden');
+          // After transition ends, remove from layout
+          setTimeout(() => {
+            card.classList.add('hidden'); // display: none
+          }, 300);
+        }
+      });
+    });
+  </script>
+  
+  <script>
+    document.getElementById('share-achievements').addEventListener('click', () => {
+      const shareUrl = window.location.href; // or a specific profile URL
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        alert('Achievements link copied to clipboard!');
+      }).catch(err => {
+        console.error('Could not copy link: ', err);
+      });
+    });
+  </script>
+</body>
+</html>

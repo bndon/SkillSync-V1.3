@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSync - Dashboard</title>
+  <script src="theme-loader.js"></script>
+  <link rel="stylesheet" href="dashboard-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <!-- Header -->
+    <header class="header">
+      <!-- Ini logo -->
+      <a href="index.html" class="logo-link">
+        <div class="logo">S</div>
+        <span>SkillSync</span>
+      </a>
+      
+      <nav class="main-nav">
+        <div class="nav-links">
+          <a href="dashboard.html" class="nav-link active">
+            <i class="fa-solid fa-house nav-icon"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="courses.html" class="nav-link">
+            <i class="fa-solid fa-book nav-icon"></i>
+            <span>Courses</span>
+          </a>
+          <a href="communities.html" class="nav-link">
+            <i class="fa-solid fa-users nav-icon"></i>
+            <span>Communities</span>
+          </a>
+          <a href="explore.html" class="nav-link">
+            <i class="fa-solid fa-compass nav-icon"></i>
+            <span>Explore</span>
+          </a>
+        </div>
+      </nav>
+      
+      <div class="user-actions">
+        <button class="notification-btn">
+          <i class="fa-solid fa-bell notification-icon"></i>
+          <span class="notification-badge">3</span>
+          <span class="sr-only">Notifications</span>
+        </button>
+        
+        <div class="dropdown">
+          <div class="avatar dropdown-trigger">
+            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="User" class="avatar-image">
+          </div>
+          
+          <div class="dropdown-menu">
+            <div class="dropdown-label">
+              <div class="user-name">Your Name</div>
+              <div class="dropdown-email user-email">name@example.com</div>
+            </div>
+            <div class="dropdown-separator"></div>
+            <a href="profile.html" class="dropdown-item">
+              <i class="fa-solid fa-user dropdown-icon"></i>
+              Profile
+            </a>
+            <a href="settings.html" class="dropdown-item">
+              <i class="fa-solid fa-gear dropdown-icon"></i>
+              Settings
+            </a>
+            <div class="dropdown-separator"></div>
+            <button class="dropdown-item">
+              <i class="fa-solid fa-right-from-bracket dropdown-icon"></i>
+              Log out
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar"> 
+        <nav class="sidebar-nav">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Menu</h3>
+            <div class="sidebar-items">
+              <a href="dashboard.html" class="sidebar-item active">
+                <i class="fa-solid fa-house sidebar-icon"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="courses.html" class="sidebar-item">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                <span>Courses</span>
+              </a>
+              <a href="communities.html" class="sidebar-item">
+                <i class="fa-solid fa-users sidebar-icon"></i>
+                <span>Communities</span>
+              </a>
+              <a href="messages.html" class="sidebar-item">
+                <i class="fa-solid fa-message sidebar-icon"></i>
+                <span>Messages</span>
+                <span class="sidebar-badge">5</span>
+              </a>
+              <a href="projects.html" class="sidebar-item">
+                <i class="fa-solid fa-code sidebar-icon"></i>
+                <span>Projects</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Discover</h3>
+            <div class="sidebar-items">
+              <a href="explore.html" class="sidebar-item">
+                <i class="fa-solid fa-compass sidebar-icon"></i>
+                <span>Explore</span>
+              </a>
+              <a href="achievements.html" class="sidebar-item">
+                <i class="fa-solid fa-star sidebar-icon"></i>
+                <span>Achievements</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Account</h3>
+            <div class="sidebar-items">
+              <a href="profile.html" class="sidebar-item">
+                <i class="fa-solid fa-user sidebar-icon"></i>
+                <span>Profile</span>
+              </a>
+              <a href="settings.html" class="sidebar-item">
+                <i class="fa-solid fa-gear sidebar-icon"></i>
+                <span>Settings</span>
+              </a>
+              <a href="help.html" class="sidebar-item">
+                <i class="fa-solid fa-circle-question sidebar-icon"></i>
+                <span>Help & Support</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+         <!-- Buat sidebar jadi bs di toggle -->
+        <div class="sidebar-footer">
+          <button class="sidebar-collapse-btn" id="sidebar-toggle-visibility">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span class="sr-only">Collapse Sidebar</span>
+          </button>
+        </div>
+      </aside>
+      
+      <!-- Main Dashboard Content -->
+      <main class="dashboard-main">
+        <section class="welcome-section">
+          <h1 class="welcome-title" id="welcome-title">Welcome back!</h1>
+          <p class="welcome-subtitle">Here's what's happening with your learning journey today.</p>
+        </section>
+        
+        <div class="dashboard-grid">
+          <!-- Stats Cards -->
+          <section class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-header">
+                <h3 class="stat-title">Courses Enrolled</h3>
+              </div>
+              <div class="stat-content">
+                <div class="stat-value">12</div>
+                <p class="stat-description">2 courses in progress</p>
+              </div>
+            </div>
+            
+            <div class="stat-card">
+              <div class="stat-header">
+                <h3 class="stat-title">Hours Learned</h3>
+              </div>
+              <div class="stat-content">
+                <div class="stat-value">48</div>
+                <p class="stat-description">+3 hours this week</p>
+              </div>
+            </div>
+            
+            <div class="stat-card">
+              <div class="stat-header">
+                <h3 class="stat-title">Certificates</h3>
+              </div>
+              <div class="stat-content">
+                <div class="stat-value">5</div>
+                <p class="stat-description">2 pending completion</p>
+              </div>
+            </div>
+            
+            <div class="stat-card">
+              <div class="stat-header">
+                <h3 class="stat-title">Communities</h3>
+              </div>
+              <div class="stat-content">
+                <div class="stat-value">7</div>
+                <p class="stat-description">3 new messages</p>
+              </div>
+            </div>
+          </section>
+          
+          <div class="progress-deadlines-container">
+            <!-- Learning Progress -->
+            <section class="progress-section">
+              <div class="section-header">
+                <h2 class="section-title">Learning Progress</h2>
+                <a href="courses.html" class="view-all-link">View all</a>
+              </div>
+              
+              <div class="progress-cards">
+                <div class="progress-card">
+                  <div class="progress-info">
+                    <h3 class="progress-title">Web Development Fundamentals</h3>
+                    <div class="progress-meta">
+                      <span class="progress-percent">75%</span>
+                      <span class="progress-time">3h 45m left</span>
+                    </div>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%"></div>
+                  </div>
+                </div>
+                
+                <div class="progress-card">
+                  <div class="progress-info">
+                    <h3 class="progress-title">UX Design Principles</h3>
+                    <div class="progress-meta">
+                      <span class="progress-percent">45%</span>
+                      <span class="progress-time">5h 20m left</span>
+                    </div>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 45%"></div>
+                  </div>
+                </div>
+                
+                <div class="progress-card">
+                  <div class="progress-info">
+                    <h3 class="progress-title">Data Science Basics</h3>
+                    <div class="progress-meta">
+                      <span class="progress-percent">30%</span>
+                      <span class="progress-time">8h 15m left</span>
+                    </div>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 30%"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <!-- Upcoming Deadlines -->
+            <section class="deadlines-section">
+              <div class="section-header">
+                <h2 class="section-title">Upcoming Deadlines</h2>
+                <a href="calendar.html" class="view-all-link">View all</a>
+              </div>
+              
+              <div class="deadline-cards">
+                <div class="deadline-card">
+                  <div class="deadline-date">
+                    <div class="deadline-day">15</div>
+                    <div class="deadline-month">Jun</div>
+                  </div>
+                  <div class="deadline-info">
+                    <h3 class="deadline-title">Final Project Submission</h3>
+                    <p class="deadline-course">Web Development Fundamentals</p>
+                  </div>
+                  <div class="deadline-badge urgent">Urgent</div>
+                </div>
+                
+                <div class="deadline-card">
+                  <div class="deadline-date">
+                    <div class="deadline-day">22</div>
+                    <div class="deadline-month">Jun</div>
+                  </div>
+                  <div class="deadline-info">
+                    <h3 class="deadline-title">Group Presentation</h3>
+                    <p class="deadline-course">UX Design Principles</p>
+                  </div>
+                  <div class="deadline-badge">Upcoming</div>
+                </div>
+                
+                <div class="deadline-card">
+                  <div class="deadline-date">
+                    <div class="deadline-day">30</div>
+                    <div class="deadline-month">Jun</div>
+                  </div>
+                  <div class="deadline-info">
+                    <h3 class="deadline-title">Quiz: Data Analysis</h3>
+                    <p class="deadline-course">Data Science Basics</p>
+                  </div>
+                  <div class="deadline-badge">Upcoming</div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Recommended Content -->
+          <section class="content-section">
+            <div class="tabs">
+              <button class="tab-btn active" data-tab="recommended">Recommended</button>
+              <button class="tab-btn" data-tab="popular">Popular</button>
+              <button class="tab-btn" data-tab="new">New</button>
+            </div>
+            
+            <div class="tab-content active" id="recommended-content">
+              <div class="content-grid">
+                <a href="courses.html">
+                  <div class="content-card">
+                    <div class="content-image">
+                      <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/dashboard/Javascript Mastery.jpg" alt="JavaScript Mastery">
+                      <div class="content-badge course">Course</div>
+                    </div>
+                    <div class="content-info">
+                      <h3 class="content-title">JavaScript Mastery</h3>
+                      <p class="content-description">Advanced concepts for modern web development</p>
+                      <div class="content-meta">
+                        <span class="content-rating">
+                          <i class="fa-solid fa-star"></i>
+                          4.8
+                        </span>
+                        <span class="content-duration">
+                          <i class="fa-solid fa-clock"></i>
+                          12h
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="projects.html">
+                  <div class="content-card">
+                    <div class="content-image">
+                      <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/dashboard/Mobile-App.jpg" alt="Mobile App Design">
+                      <div class="content-badge project">Project</div>
+                    </div>
+                    <div class="content-info">
+                      <h3 class="content-title">Mobile App Design</h3>
+                      <p class="content-description">Create a functional prototype for a mobile app</p>
+                      <div class="content-meta">
+                        <span class="content-difficulty">
+                          <i class="fa-solid fa-signal"></i>
+                          Intermediate
+                        </span>
+                        <span class="content-team">
+                          <i class="fa-solid fa-users"></i>
+                          Team
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="communities.html">
+                  <div class="content-card">
+                    <div class="content-image">
+                      <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/dashboard/FrontEnd Developer.jpeg" alt="Frontend Developers">
+                      <div class="content-badge community">Community</div>
+                    </div>
+                    <div class="content-info">
+                      <h3 class="content-title">Frontend Developers</h3>
+                      <p class="content-description">Connect with other frontend developers</p>
+                      <div class="content-meta">
+                        <span class="content-members">
+                          <i class="fa-solid fa-user-group"></i>
+                          1.2k members
+                        </span>
+                        <span class="content-activity">
+                          <i class="fa-solid fa-bolt"></i>
+                          Active
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="courses.html">
+                  <div class="content-card">
+                    <div class="content-image">
+                      <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/dashboard/Data Analysis with phyton.jpg" alt="Python for Data Analysis">
+                      <div class="content-badge course">Course</div>
+                    </div>
+                    <div class="content-info">
+                      <h3 class="content-title">Python for Data Analysis</h3>
+                      <p class="content-description">Learn data analysis with Python and pandas</p>
+                      <div class="content-meta">
+                        <span class="content-rating">
+                          <i class="fa-solid fa-star"></i>
+                          4.6
+                        </span>
+                        <span class="content-duration">
+                          <i class="fa-solid fa-clock"></i>
+                          15h
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="tab-content" id="popular-content">
+              <!-- Popular content will be loaded here -->
+              <div class="content-placeholder">Loading popular content...</div>
+            </div>
+            
+            <div class="tab-content" id="new-content">
+              <!-- New content will be loaded here -->
+              <div class="content-placeholder">Loading new content...</div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  <script>
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.sidebar-collapse-btn');
+  
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  
+    // If you want to control visibility separately:
+    document.querySelector('#sidebar-toggle-visibility').addEventListener('click', () => {
+      sidebar.classList.toggle('visible');
+    });
+  </script>
+  <script>
+// Initialize dashboard with user data
+function initializeDashboard() {
+  const currentUser = getCurrentUser();
+  
+  if (currentUser) {
+    // Update welcome message
+    const welcomeTitle = document.getElementById('welcome-title');
+    if (welcomeTitle) {
+      welcomeTitle.textContent = `Welcome back, ${currentUser.firstName}!`;
+    }
+    
+    // Update user name in dropdown
+    const userNameElements = document.querySelectorAll('.user-name');
+    userNameElements.forEach(element => {
+      element.textContent = currentUser.fullName || `${currentUser.firstName} ${currentUser.lastName}`;
+    });
+    
+    // Update user email in dropdown
+    const userEmailElements = document.querySelectorAll('.user-email');
+    userEmailElements.forEach(element => {
+      element.textContent = currentUser.email;
+    });
+    
+    // Update avatar alt text
+    const avatarImages = document.querySelectorAll('.avatar-image');
+    avatarImages.forEach(img => {
+      img.alt = currentUser.fullName || `${currentUser.firstName} ${currentUser.lastName}`;
+    });
+  }
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', initializeDashboard);
+</script>
+</body>
+</html>

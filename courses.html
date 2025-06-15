@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSync - My Courses</title>
+  <script src="theme-loader.js"></script>
+  <link rel="stylesheet" href="courses-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container" id="app">
+    <!-- Header  -->
+    <header class="header">
+      <a href="index.html" class="logo-link">
+        <div class="logo">S</div>
+        <span>SkillSync</span>
+      </a>
+  
+      <nav class="main-nav">
+        <div class="nav-links">
+          <a href="dashboard.html" class="nav-link">
+            <i class="fa-solid fa-house nav-icon"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="courses.html" class="nav-link active">
+            <i class="fa-solid fa-book nav-icon"></i>
+            <span>Courses</span>
+          </a>
+          <a href="communities.html" class="nav-link">
+            <i class="fa-solid fa-users nav-icon"></i>
+            <span>Communities</span>
+          </a>
+          <a href="explore.html" class="nav-link">
+            <i class="fa-solid fa-compass nav-icon"></i>
+            <span>Explore</span>
+          </a>
+        </div>
+      </nav>
+      
+      <div class="user-actions">
+        <button class="notification-btn">
+          <i class="fa-solid fa-bell notification-icon"></i>
+          <span class="notification-badge">3</span>
+          <span class="sr-only">Notifications</span>
+        </button>
+        
+        <div class="dropdown">
+          <div class="avatar dropdown-trigger">
+            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="User" class="avatar-image">
+          </div>
+          
+          <div class="dropdown-menu">
+            <div class="dropdown-label">
+              <div>John Doe</div>
+              <div class="dropdown-email">john@example.com</div>
+            </div>
+            <div class="dropdown-separator"></div>
+            <a href="profile.html" class="dropdown-item">
+              <i class="fa-solid fa-user dropdown-icon"></i>
+              Profile
+            </a>
+            <a href="settings.html" class="dropdown-item">
+              <i class="fa-solid fa-gear dropdown-icon"></i>
+              Settings
+            </a>
+            <div class="dropdown-separator"></div>
+            <button class="dropdown-item">
+              <i class="fa-solid fa-right-from-bracket dropdown-icon"></i>
+              Log out
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Menu</h3>
+            <div class="sidebar-items">
+              <a href="dashboard.html" class="sidebar-item">
+                <i class="fa-solid fa-house sidebar-icon"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="courses.html" class="sidebar-item active">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                <span>Courses</span>
+              </a>
+              <a href="communities.html" class="sidebar-item">
+                <i class="fa-solid fa-users sidebar-icon"></i>
+                <span>Communities</span>
+              </a>
+              <a href="messages.html" class="sidebar-item">
+                <i class="fa-solid fa-message sidebar-icon"></i>
+                <span>Messages</span>
+                <span class="sidebar-badge">5</span>
+              </a>
+              <a href="projects.html" class="sidebar-item">
+                <i class="fa-solid fa-code sidebar-icon"></i>
+                <span>Projects</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Discover</h3>
+            <div class="sidebar-items">
+              <a href="explore.html" class="sidebar-item">
+                <i class="fa-solid fa-compass sidebar-icon"></i>
+                <span>Explore</span>
+              </a>
+              <a href="achievements.html" class="sidebar-item">
+                <i class="fa-solid fa-star sidebar-icon"></i>
+                <span>Achievements</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Account</h3>
+            <div class="sidebar-items">
+              <a href="profile.html" class="sidebar-item">
+                <i class="fa-solid fa-user sidebar-icon"></i>
+                <span>Profile</span>
+              </a>
+              <a href="settings.html" class="sidebar-item">
+                <i class="fa-solid fa-gear sidebar-icon"></i>
+                <span>Settings</span>
+              </a>
+              <a href="help.html" class="sidebar-item">
+                <i class="fa-solid fa-circle-question sidebar-icon"></i>
+                <span>Help & Support</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+         <!-- Buat sidebar jadi bs di toggle -->
+         <div class="sidebar-footer">
+          <button class="sidebar-collapse-btn" id="sidebar-toggle-visibility">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span class="sr-only">Collapse Sidebar</span>
+          </button>
+        </div>
+      </aside>
+      
+      <!-- Courses Content -->
+      <main class="page-main">
+        <div class="page-header">
+          <div class="page-heading">
+            <h1 class="page-title">My Courses</h1>
+            <p class="page-subtitle">Browse and manage your courses</p>
+
+            <nav class="tab-container">
+              <button class="tab active tab-btn" data-target="in-progress">In Progress</button>
+              <button class="tab tab-btn" data-target="completed">Completed</button>
+              <button class="tab tab-btn" data-target="not-started">Not Started</button>
+            </nav>
+          </div>
+        </div>
+        
+        <div class="courses-grid">
+          <!-- In Progress Courses -->
+          <section class="courses-section" data-tab="in-progress">
+            <h2 class="section-title">In Progress</h2>
+            
+            <div class="course-cards">
+              <div class="course-card">
+                <div class="course-image">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/courses/webDevelopmentFundamentals.jpg" alt="Web Development Fundamentals">
+                  <div class="course-progress">
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                    <span class="progress-text">75%</span>
+                  </div>
+                </div>
+                <div class="course-info">
+                  <h3 class="course-title">Web Development Fundamentals</h3>
+                  <p class="course-instructor">By Sarah Johnson</p>
+                  <div class="course-meta">
+                    <span class="course-lessons">
+                      <i class="fa-solid fa-book-open"></i>
+                      12/16 lessons
+                    </span>
+                    <span class="course-time">
+                      <i class="fa-solid fa-clock"></i>
+                      3h 45m left
+                    </span>
+                  </div>
+                  <a href="course-detail.html?id=1" class="course-continue-btn">Continue Learning</a>
+                </div>
+              </div>
+              
+              <div class="course-card">
+                <div class="course-image">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/courses/ux-design-principles.webp" alt="UX Design Principles">
+                  <div class="course-progress">
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 45%"></div>
+                    </div>
+                    <span class="progress-text">45%</span>
+                  </div>
+                </div>
+                <div class="course-info">
+                  <h3 class="course-title">UX Design Principles</h3>
+                  <p class="course-instructor">By Michael Chen</p>
+                  <div class="course-meta">
+                    <span class="course-lessons">
+                      <i class="fa-solid fa-book-open"></i>
+                      9/20 lessons
+                    </span>
+                    <span class="course-time">
+                      <i class="fa-solid fa-clock"></i>
+                      5h 20m left
+                    </span>
+                  </div>
+                  <a href="course-detail.html?id=2" class="course-continue-btn">Continue Learning</a>
+                </div>
+              </div>
+              
+              <div class="course-card">
+                <div class="course-image">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/courses/Is-data-science-hard-to-learn.webp" alt="Data Science Basics">
+                  <div class="course-progress">
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 30%"></div>
+                    </div>
+                    <span class="progress-text">30%</span>
+                  </div>
+                </div>
+                <div class="course-info">
+                  <h3 class="course-title">Data Science Basics</h3>
+                  <p class="course-instructor">By Alex Rodriguez</p>
+                  <div class="course-meta">
+                    <span class="course-lessons">
+                      <i class="fa-solid fa-book-open"></i>
+                      6/20 lessons
+                    </span>
+                    <span class="course-time">
+                      <i class="fa-solid fa-clock"></i>
+                      8h 15m left
+                    </span>
+                  </div>
+                  <a href="course-detail.html?id=3" class="course-continue-btn">Continue Learning</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Completed Courses -->
+          <section class="courses-section" data-tab="completed" style="display: none;">
+            <h2 class="section-title">Completed</h2>
+            
+            <div class="course-cards">
+              <div class="course-card completed">
+                <div class="course-image">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/courses/htmlcss.webp" alt="HTML & CSS Mastery">
+                  <div class="course-badge">
+                    <i class="fa-solid fa-certificate"></i>
+                    Certified
+                  </div>
+                </div>
+                <div class="course-info">
+                  <h3 class="course-title">HTML & CSS Mastery</h3>
+                  <p class="course-instructor">By David Wilson</p>
+                  <div class="course-meta">
+                    <span class="course-rating">
+                      <i class="fa-solid fa-star"></i>
+                      4.8
+                    </span>
+                    <span class="course-completion">
+                      <i class="fa-solid fa-calendar-check"></i>
+                      Completed on May 15, 2023
+                    </span>
+                  </div>
+                  <a href="course-detail.html?id=4" class="course-review-btn">Review Course</a>
+                </div>
+              </div>
+              
+              <div class="course-card completed">
+                <div class="course-image">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/courses/js.png" alt="JavaScript Basics">
+                  <div class="course-badge">
+                    <i class="fa-solid fa-certificate"></i>
+                    Certified
+                  </div>
+                </div>
+                <div class="course-info">
+                  <h3 class="course-title">JavaScript Basics</h3>
+                  <p class="course-instructor">By Emily Parker</p>
+                  <div class="course-meta">
+                    <span class="course-rating">
+                      <i class="fa-solid fa-star"></i>
+                      4.6
+                    </span>
+                    <span class="course-completion">
+                      <i class="fa-solid fa-calendar-check"></i>
+                      Completed on April 3, 2023
+                    </span>
+                  </div>
+                  <a href="course-detail.html?id=5" class="course-review-btn">Review Course</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Not Started Courses -->
+          <section class="courses-section" data-tab="not-started" style="display: none;">
+            <h2 class="section-title">Not Started</h2>
+            
+            <div class="course-cards">
+              <div class="course-card not-started">
+                <div class="course-image">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/courses/react.jpg" alt="React for Beginners">
+                </div>
+                <div class="course-info">
+                  <h3 class="course-title">React for Beginners</h3>
+                  <p class="course-instructor">By James Thompson</p>
+                  <div class="course-meta">
+                    <span class="course-duration">
+                      <i class="fa-solid fa-clock"></i>
+                      10 hours
+                    </span>
+                    <span class="course-level">
+                      <i class="fa-solid fa-signal"></i>
+                      Intermediate
+                    </span>
+                  </div>
+                  <a href="course-detail.html?id=6" class="course-start-btn">Start Course</a>
+                </div>
+              </div>
+              
+              <div class="course-card not-started">
+                <div class="course-image">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/courses/Best-Way-to-Learn-NodeJS-A-Complete-Roadmap.png" alt="Node.js Fundamentals">
+                </div>
+                <div class="course-info">
+                  <h3 class="course-title">Node.js Fundamentals</h3>
+                  <p class="course-instructor">By Robert Davis</p>
+                  <div class="course-meta">
+                    <span class="course-duration">
+                      <i class="fa-solid fa-clock"></i>
+                      12 hours
+                    </span>
+                    <span class="course-level">
+                      <i class="fa-solid fa-signal"></i>
+                      Advanced
+                    </span>
+                  </div>
+                  <a href="course-detail.html?id=7" class="course-start-btn">Start Course</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  <!--- ini buat sidebar-->
+  <script> 
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.sidebar-collapse-btn');
+  
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  
+    // If you want to control visibility separately:
+    document.querySelector('#sidebar-toggle-visibility').addEventListener('click', () => {
+      sidebar.classList.toggle('visible');
+    });
+  </script>
+  <!--- ini buat courses-->
+  <script>
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const courseSections = document.querySelectorAll(".courses-section");
+  
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+  
+        courseSections.forEach(section => {
+          section.style.display = section.querySelector("h2").textContent.includes(button.textContent) ? "block" : "none";
+        });
+      });
+    });
+
+    const tabs = document.querySelectorAll('.tab');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+
+    const panels = document.querySelectorAll('.tab-panel');
+  </script>
+</body>
+</html>

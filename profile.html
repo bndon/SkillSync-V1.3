@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSync - Profile</title>
+  <script src="theme-loader.js"></script>
+  <link rel="stylesheet" href="profile-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <!-- Ini logo -->
+      <a href="index.html" class="logo-link">
+        <div class="logo">S</div>
+        <span>SkillSync</span>
+      </a>
+      
+      <nav class="main-nav">
+        <div class="nav-links">
+          <a href="dashboard.html" class="nav-link">
+            <i class="fa-solid fa-house nav-icon"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="courses.html" class="nav-link">
+            <i class="fa-solid fa-book nav-icon"></i>
+            <span>Courses</span>
+          </a>
+          <a href="communities.html" class="nav-link">
+            <i class="fa-solid fa-users nav-icon"></i>
+            <span>Communities</span>
+          </a>
+          <a href="explore.html" class="nav-link">
+            <i class="fa-solid fa-compass nav-icon"></i>
+            <span>Explore</span>
+          </a>
+        </div>
+      </nav>
+      
+      <div class="user-actions">
+        <button class="notification-btn">
+          <i class="fa-solid fa-bell notification-icon"></i>
+          <span class="notification-badge">3</span>
+          <span class="sr-only">Notifications</span>
+        </button>
+        
+        <div class="dropdown">
+          <div class="avatar dropdown-trigger">
+            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="User" class="avatar-image">
+          </div>
+          
+          <div class="dropdown-menu">
+            <div class="dropdown-label">
+              <div>Your Name</div>
+              <div class="dropdown-email">Name@example.com</div>
+            </div>
+            <div class="dropdown-separator"></div>
+            <a href="profile.html" class="dropdown-item">
+              <i class="fa-solid fa-user dropdown-icon"></i>
+              Profile
+            </a>
+            <a href="settings.html" class="dropdown-item">
+              <i class="fa-solid fa-gear dropdown-icon"></i>
+              Settings
+            </a>
+            <div class="dropdown-separator"></div>
+            <button class="dropdown-item">
+              <i class="fa-solid fa-right-from-bracket dropdown-icon"></i>
+              Log out
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar"> 
+        <nav class="sidebar-nav">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Menu</h3>
+            <div class="sidebar-items">
+              <a href="dashboard.html" class="sidebar-item">
+                <i class="fa-solid fa-house sidebar-icon"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="courses.html" class="sidebar-item">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                <span>Courses</span>
+              </a>
+              <a href="communities.html" class="sidebar-item">
+                <i class="fa-solid fa-users sidebar-icon"></i>
+                <span>Communities</span>
+              </a>
+              <a href="messages.html" class="sidebar-item">
+                <i class="fa-solid fa-message sidebar-icon"></i>
+                <span>Messages</span>
+                <span class="sidebar-badge">5</span>
+              </a>
+              <a href="projects.html" class="sidebar-item">
+                <i class="fa-solid fa-code sidebar-icon"></i>
+                <span>Projects</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Discover</h3>
+            <div class="sidebar-items">
+              <a href="explore.html" class="sidebar-item">
+                <i class="fa-solid fa-compass sidebar-icon"></i>
+                <span>Explore</span>
+              </a>
+              <a href="achievements.html" class="sidebar-item">
+                <i class="fa-solid fa-star sidebar-icon"></i>
+                <span>Achievements</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Account</h3>
+            <div class="sidebar-items">
+              <a href="profile.html" class="sidebar-item active">
+                <i class="fa-solid fa-user sidebar-icon"></i>
+                <span>Profile</span>
+              </a>
+              <a href="settings.html" class="sidebar-item">
+                <i class="fa-solid fa-gear sidebar-icon"></i>
+                <span>Settings</span>
+              </a>
+              <a href="help.html" class="sidebar-item">
+                <i class="fa-solid fa-circle-question sidebar-icon"></i>
+                <span>Help & Support</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+         <!-- Buat sidebar jadi bs di toggle -->
+        <div class="sidebar-footer">
+          <button class="sidebar-collapse-btn" id="sidebar-toggle-visibility">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span class="sr-only">Collapse Sidebar</span>
+          </button>
+        </div>
+      </aside>
+      
+      <!-- Profile Content -->
+      <main class="page-main">
+        <div class="profile-header">
+          <div class="profile-cover">
+            <img id="cover-image" src="https://raw.githubusercontent.com/bndon/SkillSync/main/Default.png" alt="Profile Cover">
+            <button class="edit-cover-btn" id="edit-cover-btn">
+              <i class="fa-solid fa-camera"></i>
+            </button>
+            <input type="file" id="cover-upload" accept="image/*" style="display: none;" />
+          </div>
+          
+          
+          <div class="profile-info">
+            <div class="profile-avatar">
+              <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="John Doe">
+              <button class="edit-avatar-btn">
+                <i class="fa-solid fa-camera"></i>
+              </button>
+            </div>
+            
+            <div class="profile-details">
+              <h1 class="profile-name">Nama Pengguna</h1>
+              <p class="profile-title">Full Stack Developer</p>
+              <p class="profile-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Jakarta, Indonesia
+              </p>
+              <div class="skills-inline">
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">React</span>
+                <span class="skill-badge">Node.js</span>
+                <span class="skill-badge">Python</span>
+              </div>
+              <div class="profile-stats">
+                <div class="profile-stat">
+                  <div class="stat-value">12</div>
+                  <div class="stat-label">Courses</div>
+                </div>
+                <div class="profile-stat">
+                  <div class="stat-value">5</div>
+                  <div class="stat-label">Certificates</div>
+                </div>
+                <div class="profile-stat">
+                  <div class="stat-value">7</div>
+                  <div class="stat-label">Communities</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="profile-actions">
+              <a href="settings.html" class="btn outline-btn">
+                <i class="fa-solid fa-gear"></i>
+                Edit Profile
+              </a>
+              <button class="btn primary-btn" id="share-profile-btn">
+                <i class="fa-solid fa-share-nodes"></i>
+                Share Profile
+              </button>              
+            </div>
+          </div>
+        </div>
+        
+        <div class="profile-content">
+          <div class="profile-tabs">
+            <button class="profile-tab active" data-tab="about">About</button>
+            <button class="profile-tab" data-tab="skills">Skills</button>
+            <button class="profile-tab" data-tab="achievements">Achievements</button>
+            <button class="profile-tab" data-tab="activity">Activity</button>
+          </div>
+          
+          <div class="tab-content active" id="about-content">
+            <div class="about-section">
+              <h2 class="section-title">About Me</h2>
+              <p class="about-text">
+                Full Stack Developer with 5 years of experience building web applications using JavaScript, React, Node.js, and Python. Passionate about learning new technologies and sharing knowledge with others.
+              </p>
+              
+              <div class="about-grid">
+                <div class="about-item">
+                  <h3 class="about-item-title">
+                    <i class="fa-solid fa-briefcase"></i>
+                    Work Experience
+                  </h3>
+                  <div class="timeline">
+                    <div class="timeline-item">
+                      <div class="timeline-date">2021 - Present</div>
+                      <div class="timeline-content">
+                        <h4 class="timeline-title">Senior Developer</h4>
+                        <p class="timeline-company">TechCorp Inc.</p>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-date">2018 - 2021</div>
+                      <div class="timeline-content">
+                        <h4 class="timeline-title">Web Developer</h4>
+                        <p class="timeline-company">Digital Solutions LLC</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="about-item">
+                  <h3 class="about-item-title">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Education
+                  </h3>
+                  <div class="timeline">
+                    <div class="timeline-item">
+                      <div class="timeline-date">2014 - 2018</div>
+                      <div class="timeline-content">
+                        <h4 class="timeline-title">B.S. Computer Science</h4>
+                        <p class="timeline-company">University of Technology</p>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-date">2012 - 2014</div>
+                      <div class="timeline-content">
+                        <h4 class="timeline-title">Associate's Degree</h4>
+                        <p class="timeline-company">Community College</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tab-content" id="skills-content">
+            <div class="skills-grid" id="skills-container">
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">React</span>
+              <span class="skill-badge">Python</span>
+              <button class="add-skill-btn" id="add-skill-btn">
+                <i class="fa-solid fa-plus"></i> Add Skill
+              </button>
+            </div>
+          </div>
+          
+          <div class="tab-content" id="achievements-content">
+            <p>No achievements added yet.</p>
+          </div>
+          
+          <div class="tab-content" id="activity-content">
+            <p>No recent activity.</p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  <script src="profile-script.js"></script>
+  <script>
+    // Profile-specific JavaScript
+    document.addEventListener("DOMContentLoaded", () => {
+      // Profile tabs functionality
+      const profileTabs = document.querySelectorAll(".profile-tab");
+      
+      profileTabs.forEach((tab) => {
+        tab.addEventListener("click", function() {
+          const tabId = this.dataset.tab;
+          
+          // Remove active class from all profile tabs and content
+          document.querySelectorAll(".profile-tab").forEach((t) => {
+            t.classList.remove("active");
+          });
+          
+          document.querySelectorAll(".tab-content").forEach((content) => {
+            content.classList.remove("active");
+          });
+          
+          // Add active class to clicked profile tab and corresponding content
+          this.classList.add("active");
+          document.getElementById(`${tabId}-content`).classList.add("active");
+        });
+      });
+    });
+  </script>
+  <script>
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.sidebar-collapse-btn');
+  
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  
+    document.querySelector('#sidebar-toggle-visibility').addEventListener('click', () => {
+      sidebar.classList.toggle('visible');
+    });
+  </script>
+</body>
+</html>

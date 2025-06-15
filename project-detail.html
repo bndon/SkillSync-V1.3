@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSync - E-Commerce Platform</title>
+  <script src="theme-loader.js"></script>
+  <link rel="stylesheet" href="project-detail-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+        <!-- Ini logo -->
+        <a href="index.html" class="logo-link">
+          <div class="logo">S</div>
+          <span>SkillSync</span>
+        </a>
+        
+        <nav class="main-nav">
+          <div class="nav-links">
+            <a href="dashboard.html" class="nav-link">
+              <i class="fa-solid fa-house nav-icon"></i>
+              <span>Dashboard</span>
+            </a>
+            <a href="courses.html" class="nav-link">
+              <i class="fa-solid fa-book nav-icon"></i>
+              <span>Courses</span>
+            </a>
+            <a href="communities.html" class="nav-link">
+              <i class="fa-solid fa-users nav-icon"></i>
+              <span>Communities</span>
+            </a>
+            <a href="explore.html" class="nav-link active">
+              <i class="fa-solid fa-compass nav-icon"></i>
+              <span>Explore</span>
+            </a>
+          </div>
+        </nav>
+        
+        <div class="user-actions">
+          <button class="notification-btn">
+            <i class="fa-solid fa-bell notification-icon"></i>
+            <span class="notification-badge">3</span>
+            <span class="sr-only">Notifications</span>
+          </button>
+          
+          <div class="dropdown">
+            <div class="avatar dropdown-trigger">
+              <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="User" class="avatar-image">
+            </div>
+            
+            <div class="dropdown-menu">
+              <div class="dropdown-label">
+                <div>Your Name</div>
+                <div class="dropdown-email">Name@example.com</div>
+              </div>
+              <div class="dropdown-separator"></div>
+              <a href="profile.html" class="dropdown-item">
+                <i class="fa-solid fa-user dropdown-icon"></i>
+                Profile
+              </a>
+              <a href="settings.html" class="dropdown-item">
+                <i class="fa-solid fa-gear dropdown-icon"></i>
+                Settings
+              </a>
+              <div class="dropdown-separator"></div>
+              <button class="dropdown-item">
+                <i class="fa-solid fa-right-from-bracket dropdown-icon"></i>
+                Log out
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+    <div class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar"> 
+        <nav class="sidebar-nav">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Menu</h3>
+            <div class="sidebar-items">
+              <a href="dashboard.html" class="sidebar-item">
+                <i class="fa-solid fa-house sidebar-icon"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="courses.html" class="sidebar-item">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                <span>Courses</span>
+              </a>
+              <a href="communities.html" class="sidebar-item">
+                <i class="fa-solid fa-users sidebar-icon"></i>
+                <span>Communities</span>
+              </a>
+              <a href="messages.html" class="sidebar-item">
+                <i class="fa-solid fa-message sidebar-icon"></i>
+                <span>Messages</span>
+                <span class="sidebar-badge">5</span>
+              </a>
+              <a href="projects.html" class="sidebar-item">
+                <i class="fa-solid fa-code sidebar-icon"></i>
+                <span>Projects</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Discover</h3>
+            <div class="sidebar-items">
+              <a href="explore.html" class="sidebar-item active">
+                <i class="fa-solid fa-compass sidebar-icon"></i>
+                <span>Explore</span>
+              </a>
+              <a href="achievements.html" class="sidebar-item">
+                <i class="fa-solid fa-star sidebar-icon"></i>
+                <span>Achievements</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Account</h3>
+            <div class="sidebar-items">
+              <a href="profile.html" class="sidebar-item">
+                <i class="fa-solid fa-user sidebar-icon"></i>
+                <span>Profile</span>
+              </a>
+              <a href="settings.html" class="sidebar-item">
+                <i class="fa-solid fa-gear sidebar-icon"></i>
+                <span>Settings</span>
+              </a>
+              <a href="help.html" class="sidebar-item">
+                <i class="fa-solid fa-circle-question sidebar-icon"></i>
+                <span>Help & Support</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+         <!-- Buat sidebar jadi bs di toggle -->
+        <div class="sidebar-footer">
+          <button class="sidebar-collapse-btn" id="sidebar-toggle-visibility">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span class="sr-only">Collapse Sidebar</span>
+          </button>
+        </div>
+      </aside>
+      
+      <!-- Project Detail Content -->
+      <main class="page-main">
+        <!-- Project Breadcrumb -->
+        <div class="project-breadcrumb">
+          <a href="projects.html">Projects</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>E-Commerce Platform</span>
+        </div>
+
+        <!-- Project Hero -->
+        <div class="project-hero">
+          <div class="project-header">
+            <div class="project-info">
+              <h1 class="project-title">E-Commerce Platform</h1>
+              <p class="project-description">
+                A full-stack e-commerce platform built with modern web technologies. 
+                Features include user authentication, product catalog, shopping cart, 
+                payment integration, and admin dashboard.
+              </p>
+              <div class="project-meta">
+                <div class="meta-item">
+                  <i class="fas fa-users"></i>
+                  <span>12 Contributors</span>
+                </div>
+                <div class="meta-item">
+                  <i class="fas fa-star"></i>
+                  <span>4.8 Rating</span>
+                </div>
+                <div class="meta-item">
+                  <i class="fas fa-code-branch"></i>
+                  <span>45 Forks</span>
+                </div>
+                <div class="meta-item">
+                  <i class="fas fa-eye"></i>
+                  <span>1.2k Views</span>
+                </div>
+              </div>
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Express</span>
+                <span class="tag">Stripe</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-primary">
+                <i class="fas fa-plus"></i>
+                Join Project
+              </button>
+              <button class="btn btn-outline">
+                <i class="fab fa-github"></i>
+                View Code
+              </button>
+              <button class="btn btn-outline">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Content -->
+        <div class="content-grid">
+          <!-- Main Content -->
+          <div class="main-content-area">
+            <!-- Project Overview -->
+            <div class="content-section">
+              <h2 class="section-title">Project Overview</h2>
+              <div class="project-gallery">
+                <div class="gallery-main">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/explore/ecommerce-Website-Project.webp" alt="Project Screenshot" class="gallery-image">
+                </div>
+                <div class="gallery-thumbnails">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/explore/ecommerce-Website-Project.webp" alt="Screenshot 1" class="thumbnail active">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/explore/ecommerce-Website-Project.webp" alt="Screenshot 2" class="thumbnail">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/explore/ecommerce-Website-Project.webp" alt="Screenshot 3" class="thumbnail">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/explore/ecommerce-Website-Project.webp" alt="Screenshot 4" class="thumbnail">
+                </div>
+              </div>
+              <div class="project-details">
+                <h3>About This Project</h3>
+                <p>
+                  This e-commerce platform is designed to provide a complete online shopping experience. 
+                  Built with scalability and performance in mind, it includes features like real-time 
+                  inventory management, secure payment processing, and responsive design.
+                </p>
+                <h3>Key Features</h3>
+                <ul class="feature-list">
+                  <li><i class="fas fa-check"></i> User authentication and authorization</li>
+                  <li><i class="fas fa-check"></i> Product catalog with search and filtering</li>
+                  <li><i class="fas fa-check"></i> Shopping cart and wishlist functionality</li>
+                  <li><i class="fas fa-check"></i> Secure payment integration with Stripe</li>
+                  <li><i class="fas fa-check"></i> Order tracking and management</li>
+                  <li><i class="fas fa-check"></i> Admin dashboard for inventory management</li>
+                  <li><i class="fas fa-check"></i> Responsive design for all devices</li>
+                  <li><i class="fas fa-check"></i> Email notifications and confirmations</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Contributors -->
+            <div class="content-section">
+              <h2 class="section-title">Contributors</h2>
+              <div class="contributors-grid">
+                <div class="contributor-card">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="Sarah Chen" class="contributor-avatar">
+                  <div class="contributor-info">
+                    <h4 class="contributor-name">Sarah Chen</h4>
+                    <p class="contributor-role">Project Lead</p>
+                    <div class="contributor-stats">
+                      <span><i class="fas fa-code"></i> 45 commits</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="contributor-card">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="Mike Johnson" class="contributor-avatar">
+                  <div class="contributor-info">
+                    <h4 class="contributor-name">Mike Johnson</h4>
+                    <p class="contributor-role">Frontend Developer</p>
+                    <div class="contributor-stats">
+                      <span><i class="fas fa-code"></i> 32 commits</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="contributor-card">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="Emily Davis" class="contributor-avatar">
+                  <div class="contributor-info">
+                    <h4 class="contributor-name">Emily Davis</h4>
+                    <p class="contributor-role">Backend Developer</p>
+                    <div class="contributor-stats">
+                      <span><i class="fas fa-code"></i> 28 commits</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="contributor-card">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="Alex Rodriguez" class="contributor-avatar">
+                  <div class="contributor-info">
+                    <h4 class="contributor-name">Alex Rodriguez</h4>
+                    <p class="contributor-role">UI/UX Designer</p>
+                    <div class="contributor-stats">
+                      <span><i class="fas fa-code"></i> 15 commits</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Discussions -->
+            <div class="content-section">
+              <h2 class="section-title">Recent Discussions</h2>
+              <div class="discussions-list">
+                <div class="discussion-item">
+                  <div class="discussion-avatar">
+                    <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icons.png" alt="User">
+                  </div>
+                  <div class="discussion-content">
+                    <div class="discussion-header">
+                      <h4 class="discussion-author">John Smith</h4>
+                      <span class="discussion-time">2 hours ago</span>
+                    </div>
+                    <p class="discussion-text">
+                      Great work on the payment integration! The Stripe implementation looks solid. 
+                      Have you considered adding PayPal as an alternative payment method?
+                    </p>
+                    <div class="discussion-actions">
+                      <button class="discussion-btn">
+                        <i class="fas fa-thumbs-up"></i> 5
+                      </button>
+                      <button class="discussion-btn">
+                        <i class="fas fa-reply"></i> Reply
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="discussion-item">
+                  <div class="discussion-avatar">
+                    <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icons.png" alt="User">
+                  </div>
+                  <div class="discussion-content">
+                    <div class="discussion-header">
+                      <h4 class="discussion-author">Lisa Wang</h4>
+                      <span class="discussion-time">1 day ago</span>
+                    </div>
+                    <p class="discussion-text">
+                      I'd love to contribute to the mobile responsiveness. The current design looks 
+                      great on desktop, but we could improve the mobile experience.
+                    </p>
+                    <div class="discussion-actions">
+                      <button class="discussion-btn">
+                        <i class="fas fa-thumbs-up"></i> 8
+                      </button>
+                      <button class="discussion-btn">
+                        <i class="fas fa-reply"></i> Reply
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-outline btn-full">View All Discussions</button>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="project-sidebar">
+            <!-- Project Stats -->
+            <div class="sidebar-section">
+              <h3 class="sidebar-title">Project Statistics</h3>
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-value">12</div>
+                  <div class="stat-label">Contributors</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">156</div>
+                  <div class="stat-label">Commits</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">45</div>
+                  <div class="stat-label">Forks</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">23</div>
+                  <div class="stat-label">Issues</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="sidebar-section">
+              <h3 class="sidebar-title">Technology Stack</h3>
+              <div class="tech-stack">
+                <div class="tech-category">
+                  <h4>Frontend</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                  </div>
+                </div>
+                <div class="tech-category">
+                  <h4>Backend</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">MongoDB</span>
+                  </div>
+                </div>
+                <div class="tech-category">
+                  <h4>Tools</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Jest</span>
+                    <span class="tech-tag">GitHub Actions</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Related Projects -->
+            <div class="sidebar-section">
+              <h3 class="sidebar-title">Related Projects</h3>
+              <div class="related-projects">
+                <a href="#" class="related-project">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/projects/Task-manager-apps-scaled.jpg" alt="Project">
+                  <div class="related-project-info">
+                    <h4>Task Manager App</h4>
+                    <p>React, Node.js</p>
+                  </div>
+                </a>
+                <a href="#" class="related-project">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/explore/socialmedia.png" alt="Project">
+                  <div class="related-project-info">
+                    <h4>Social Media Dashboard</h4>
+                    <p>Vue.js, Python</p>
+                  </div>
+                </a>
+                <a href="#" class="related-project">
+                  <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/projects/images.jpeg" alt="Project">
+                  <div class="related-project-info">
+                    <h4>Weather App</h4>
+                    <p>React Native</p>
+                  </div>
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.sidebar-collapse-btn');
+  
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  
+    // If you want to control visibility separately:
+    document.querySelector('#sidebar-toggle-visibility').addEventListener('click', () => {
+      sidebar.classList.toggle('visible');
+    });
+  </script>
+  <script>
+    // Gallery functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const thumbnails = document.querySelectorAll('.thumbnail');
+      const mainImage = document.querySelector('.gallery-image');
+      
+      thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+          thumbnails.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+          mainImage.src = this.src.replace('150', '600').replace('100', '400');
+        });
+      });
+      
+      // Discussion interactions
+      const discussionBtns = document.querySelectorAll('.discussion-btn');
+      discussionBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          if (this.innerHTML.includes('thumbs-up')) {
+            const count = parseInt(this.textContent.trim());
+            this.innerHTML = `<i class="fas fa-thumbs-up"></i> ${count + 1}`;
+            this.style.color = '#3b82f6';
+          }
+        });
+      });
+      
+      // Project action buttons
+      const joinBtn = document.querySelector('.btn-primary');
+      const viewCodeBtn = document.querySelector('.btn-outline');
+      const liveDemoBtn = document.querySelectorAll('.btn-outline')[1];
+      
+      joinBtn.addEventListener('click', function() {
+        this.innerHTML = '<i class="fas fa-check"></i> Joined';
+        this.style.backgroundColor = '#10b981';
+      });
+      
+      viewCodeBtn.addEventListener('click', function() {
+        window.open('https://github.com', '_blank');
+      });
+      
+      liveDemoBtn.addEventListener('click', function() {
+        window.open('https://example.com', '_blank');
+      });
+    });
+  </script>
+</body>
+</html>

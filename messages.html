@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSync - Messages</title>
+  <script src="theme-loader.js"></script>
+  <link rel="stylesheet" href="messages-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <!-- Ini logo -->
+      <a href="index.html" class="logo-link">
+        <div class="logo">S</div>
+        <span>SkillSync</span>
+      </a>
+      
+      <nav class="main-nav">
+        <div class="nav-links">
+          <a href="dashboard.html" class="nav-link">
+            <i class="fa-solid fa-house nav-icon"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="courses.html" class="nav-link">
+            <i class="fa-solid fa-book nav-icon"></i>
+            <span>Courses</span>
+          </a>
+          <a href="communities.html" class="nav-link">
+            <i class="fa-solid fa-users nav-icon"></i>
+            <span>Communities</span>
+          </a>
+          <a href="explore.html" class="nav-link">
+            <i class="fa-solid fa-compass nav-icon"></i>
+            <span>Explore</span>
+          </a>
+        </div>
+      </nav>
+      
+      <div class="user-actions">
+        <button class="notification-btn">
+          <i class="fa-solid fa-bell notification-icon"></i>
+          <span class="notification-badge">3</span>
+          <span class="sr-only">Notifications</span>
+        </button>
+        
+        <div class="dropdown">
+          <div class="avatar dropdown-trigger">
+            <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png" alt="User" class="avatar-image">
+          </div>
+          
+          <div class="dropdown-menu">
+            <div class="dropdown-label">
+              <div>Your Name</div>
+              <div class="dropdown-email">Name@example.com</div>
+            </div>
+            <div class="dropdown-separator"></div>
+            <a href="profile.html" class="dropdown-item">
+              <i class="fa-solid fa-user dropdown-icon"></i>
+              Profile
+            </a>
+            <a href="settings.html" class="dropdown-item">
+              <i class="fa-solid fa-gear dropdown-icon"></i>
+              Settings
+            </a>
+            <div class="dropdown-separator"></div>
+            <button class="dropdown-item">
+              <i class="fa-solid fa-right-from-bracket dropdown-icon"></i>
+              Log out
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar"> 
+        <nav class="sidebar-nav">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Menu</h3>
+            <div class="sidebar-items">
+              <a href="dashboard.html" class="sidebar-item">
+                <i class="fa-solid fa-house sidebar-icon"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="courses.html" class="sidebar-item">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                <span>Courses</span>
+              </a>
+              <a href="communities.html" class="sidebar-item">
+                <i class="fa-solid fa-users sidebar-icon"></i>
+                <span>Communities</span>
+              </a>
+              <a href="messages.html" class="sidebar-item active">
+                <i class="fa-solid fa-message sidebar-icon"></i>
+                <span>Messages</span>
+                <span class="sidebar-badge">5</span>
+              </a>
+              <a href="projects.html" class="sidebar-item">
+                <i class="fa-solid fa-code sidebar-icon"></i>
+                <span>Projects</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Discover</h3>
+            <div class="sidebar-items">
+              <a href="explore.html" class="sidebar-item">
+                <i class="fa-solid fa-compass sidebar-icon"></i>
+                <span>Explore</span>
+              </a>
+              <a href="achievements.html" class="sidebar-item">
+                <i class="fa-solid fa-star sidebar-icon"></i>
+                <span>Achievements</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Account</h3>
+            <div class="sidebar-items">
+              <a href="profile.html" class="sidebar-item">
+                <i class="fa-solid fa-user sidebar-icon"></i>
+                <span>Profile</span>
+              </a>
+              <a href="settings.html" class="sidebar-item">
+                <i class="fa-solid fa-gear sidebar-icon"></i>
+                <span>Settings</span>
+              </a>
+              <a href="help.html" class="sidebar-item">
+                <i class="fa-solid fa-circle-question sidebar-icon"></i>
+                <span>Help & Support</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+         <!-- Buat sidebar jadi bs di toggle -->
+        <div class="sidebar-footer">
+          <button class="sidebar-collapse-btn" id="sidebar-toggle-visibility">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span class="sr-only">Collapse Sidebar</span>
+          </button>
+        </div>
+      </aside>
+      
+      <!-- Messages Content -->
+      <main class="page-main messages-layout">
+        <div class="messages-sidebar">
+          <div class="messages-header">
+            <h1 class="messages-title">Messages</h1>
+            <button class="new-message-btn">
+              <i class="fa-solid fa-pen-to-square"></i>
+              <span class="sr-only">New Message</span>
+            </button>
+          </div>
+          
+          <div class="messages-search">
+            <i class="fa-solid fa-search search-icon"></i>
+            <input type="search" placeholder="Search messages..." class="messages-search-input">
+          </div>
+          
+          <div class="conversation-list">
+            <div class="conversation-item active">
+              <div class="conversation-avatar">
+                <img src="/Images/person-icon.png" alt="Alex Rodriguez">
+                <span class="status-indicator online"></span>
+              </div>
+              <div class="conversation-info">
+                <div class="conversation-header">
+                  <h3 class="conversation-name">Alex Rodriguez</h3>
+                  <span class="conversation-time">10:30 AM</span>
+                </div>
+                <p class="conversation-preview">Hey, I saw your project on React. Would you be interested in collaborating on a similar project?</p>
+              </div>
+            </div>
+            
+            <div class="conversation-item unread">
+              <div class="conversation-avatar">
+                <img src="/Images/person-icon.png" alt="Sarah Johnson">
+                <span class="status-indicator offline"></span>
+              </div>
+              <div class="conversation-info">
+                <div class="conversation-header">
+                  <h3 class="conversation-name">Sarah Johnson</h3>
+                  <span class="conversation-time">Yesterday</span>
+                </div>
+                <p class="conversation-preview">I've shared some resources on advanced CSS techniques that might help with your current project.</p>
+              </div>
+            </div>
+            
+            <div class="conversation-item unread">
+              <div class="conversation-avatar">
+                <img src="/Images/person-icon.png" alt="Michael Chen">
+                <span class="status-indicator online"></span>
+              </div>
+              <div class="conversation-info">
+                <div class="conversation-header">
+                  <h3 class="conversation-name">Michael Chen</h3>
+                  <span class="conversation-time">Yesterday</span>
+                </div>
+                <p class="conversation-preview">Thanks for your feedback on my UX design. I've made the changes you suggested.</p>
+              </div>
+            </div>
+            
+            <div class="conversation-item">
+              <div class="conversation-avatar">
+                <img src="/Images/person-icon.png" alt="Emily Parker">
+                <span class="status-indicator away"></span>
+              </div>
+              <div class="conversation-info">
+                <div class="conversation-header">
+                  <h3 class="conversation-name">Emily Parker</h3>
+                  <span class="conversation-time">2 days ago</span>
+                </div>
+                <p class="conversation-preview">Do you have time to review my code this week? I'm stuck on implementing the authentication flow.</p>
+              </div>
+            </div>
+            
+            <div class="conversation-item">
+              <div class="conversation-avatar">
+                <img src="/Images/person-icon.png" alt="David Wilson">
+                <span class="status-indicator offline"></span>
+              </div>
+              <div class="conversation-info">
+                <div class="conversation-header">
+                  <h3 class="conversation-name">David Wilson</h3>
+                  <span class="conversation-time">3 days ago</span>
+                </div>
+                <p class="conversation-preview">I'm organizing a study group for the upcoming JavaScript course. Would you like to join?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="messages-content">
+          <div class="chat-header">
+            <div class="chat-user">
+              <div class="chat-avatar">
+                <img src="/Images/person-icon.png" alt="Alex Rodriguez">
+                <span class="status-indicator online"></span>
+              </div>
+              <div class="chat-user-info">
+                <h2 class="chat-user-name">Alex Rodriguez</h2>
+                <span class="chat-user-status">Online</span>
+              </div>
+            </div>
+            <div class="chat-actions">
+              <button class="chat-action-btn">
+                <i class="fa-solid fa-phone"></i>
+                <span class="sr-only">Call</span>
+              </button>
+              <button class="chat-action-btn">
+                <i class="fa-solid fa-video"></i>
+                <span class="sr-only">Video Call</span>
+              </button>
+              <button class="chat-action-btn">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <span class="sr-only">More Options</span>
+              </button>
+            </div>
+          </div>
+          
+          <div class="chat-messages">
+            <div class="message-date">Today</div>
+            
+            <div class="message-item received">
+              <div class="message-avatar">
+                <img src="/Images/person-icon.png" alt="Alex Rodriguez">
+              </div>
+              <div class="message-content">
+                <div class="message-bubble">
+                  <p>Hey John! I saw your React project on GitHub and was really impressed with your component architecture.</p>
+                </div>
+                <span class="message-time">10:15 AM</span>
+              </div>
+            </div>
+            
+            <div class="message-item received">
+              <div class="message-avatar">
+                <img src="/Images/person-icon.png" alt="Alex Rodriguez">
+              </div>
+              <div class="message-content">
+                <div class="message-bubble">
+                  <p>I'm working on a similar project and was wondering if you'd be interested in collaborating?</p>
+                </div>
+                <span class="message-time">10:16 AM</span>
+              </div>
+            </div>
+            
+            <div class="message-item sent">
+              <div class="message-content">
+                <div class="message-bubble">
+                  <p>Hi Alex! Thanks for reaching out and for the kind words about my project.</p>
+                </div>
+                <span class="message-time">10:20 AM</span>
+              </div>
+            </div>
+            
+            <div class="message-item sent">
+              <div class="message-content">
+                <div class="message-bubble">
+                  <p>I'd definitely be interested in collaborating! What kind of project are you working on?</p>
+                </div>
+                <span class="message-time">10:21 AM</span>
+              </div>
+            </div>
+            
+            <div class="message-item received">
+              <div class="message-avatar">
+                <img src="/Images/person-icon.png" alt="Alex Rodriguez">
+              </div>
+              <div class="message-content">
+                <div class="message-bubble">
+                  <p>It's an e-commerce platform using React and Node.js. I think your expertise in component design would be really valuable!</p>
+                </div>
+                <span class="message-time">10:30 AM</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="message-input-container">
+            <form class="message-input-form">
+              <div class="message-input-wrapper">
+                <button type="button" class="attachment-btn" id="attachment-btn">
+                  <i class="fa-solid fa-paperclip"></i>
+                  <span class="sr-only">Attach file</span>
+                </button>
+                <input type="file" id="attachment-input" hidden>
+                <input type="text" placeholder="Type a message..." class="message-input">
+                <button type="button" class="emoji-btn">
+                  <i class="fa-solid fa-face-smile"></i>
+                  <span class="sr-only">Add emoji</span>
+                </button>
+                <button type="submit" class="send-btn">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span class="sr-only">Send message</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- New Message Modal -->
+  <div class="modal" id="new-message-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">New Message</h2>
+        <button class="modal-close" id="modal-close">
+          <i class="fa-solid fa-xmark"></i>
+          <span class="sr-only">Close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="new-message-form">
+          <div class="form-group">
+            <label for="recipient">To:</label>
+            <select id="recipient" class="form-control" required>
+              <option value="">Select a recipient</option>
+              <!-- Recipients will be loaded dynamically -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text">Message:</label>
+            <textarea id="message-text" class="form-control" rows="4" placeholder="Type your message here..." required></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline" id="cancel-message">Cancel</button>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Emoji Picker (hidden initially) -->
+  <div class="emoji-picker" id="emoji-picker">
+    <div class="emoji-picker-header">
+      <h3 class="emoji-picker-title">Emojis</h3>
+      <button class="emoji-picker-close" id="emoji-picker-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="emoji-categories">
+      <button class="emoji-category active" data-category="smileys">😀</button>
+      <button class="emoji-category" data-category="people">👋</button>
+      <button class="emoji-category" data-category="animals">🐶</button>
+      <button class="emoji-category" data-category="food">🍎</button>
+      <button class="emoji-category" data-category="travel">🚗</button>
+      <button class="emoji-category" data-category="activities">⚽</button>
+      <button class="emoji-category" data-category="objects">💡</button>
+      <button class="emoji-category" data-category="symbols">❤️</button>
+    </div>
+    <div class="emoji-list" id="emoji-list">
+      <!-- Emojis will be loaded dynamically -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="messages-script.js"></script>
+  <script>
+    const sidebar = document.querySelector('.sidebar');
+    const toggleBtn = document.querySelector('.sidebar-collapse-btn');
+  
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  
+    document.querySelector('#sidebar-toggle-visibility').addEventListener('click', () => {
+      sidebar.classList.toggle('visible');
+    });
+  </script>
+</body>
+</html>

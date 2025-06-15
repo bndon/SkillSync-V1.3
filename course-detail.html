@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSync - Web Development Fundamentals</title>
+  <script src="theme-loader.js"></script>
+  <link rel="stylesheet" href="course-detail-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <!-- Ini logo -->
+      <a href="index.html" class="logo-link">
+        <div class="logo">S</div>
+        <span>SkillSync</span>
+      </a>
+      
+      <nav class="main-nav">
+        <div class="nav-links">
+          <a href="dashboard.html" class="nav-link">
+            <i class="fa-solid fa-house nav-icon"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="courses.html" class="nav-link">
+            <i class="fa-solid fa-book nav-icon"></i>
+            <span>Courses</span>
+          </a>
+          <a href="communities.html" class="nav-link">
+            <i class="fa-solid fa-users nav-icon"></i>
+            <span>Communities</span>
+          </a>
+          <a href="explore.html" class="nav-link">
+            <i class="fa-solid fa-compass nav-icon"></i>
+            <span>Explore</span>
+          </a>
+        </div>
+      </nav>
+      
+      <div class="user-actions">
+        <button class="notification-btn">
+          <i class="fa-solid fa-bell notification-icon"></i>
+          <span class="notification-badge">3</span>
+          <span class="sr-only">Notifications</span>
+        </button>
+        
+        <div class="dropdown">
+          <div class="avatar dropdown-trigger">
+            <img src="/placeholder.svg" alt="User" class="avatar-image">
+          </div>
+          
+          <div class="dropdown-menu">
+            <div class="dropdown-label">
+              <div>Your Name</div>
+              <div class="dropdown-email">Name@example.com</div>
+            </div>
+            <div class="dropdown-separator"></div>
+            <a href="profile.html" class="dropdown-item">
+              <i class="fa-solid fa-user dropdown-icon"></i>
+              Profile
+            </a>
+            <a href="settings.html" class="dropdown-item">
+              <i class="fa-solid fa-gear dropdown-icon"></i>
+              Settings
+            </a>
+            <div class="dropdown-separator"></div>
+            <button class="dropdown-item">
+              <i class="fa-solid fa-right-from-bracket dropdown-icon"></i>
+              Log out
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar"> 
+        <nav class="sidebar-nav">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Menu</h3>
+            <div class="sidebar-items">
+              <a href="dashboard.html" class="sidebar-item">
+                <i class="fa-solid fa-house sidebar-icon"></i>
+                <span>Dashboard</span>
+              </a>
+              <a href="courses.html" class="sidebar-item">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                <span>Courses</span>
+              </a>
+              <a href="communities.html" class="sidebar-item">
+                <i class="fa-solid fa-users sidebar-icon"></i>
+                <span>Communities</span>
+              </a>
+              <a href="messages.html" class="sidebar-item">
+                <i class="fa-solid fa-message sidebar-icon"></i>
+                <span>Messages</span>
+                <span class="sidebar-badge">5</span>
+              </a>
+              <a href="projects.html" class="sidebar-item">
+                <i class="fa-solid fa-code sidebar-icon"></i>
+                <span>Projects</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Discover</h3>
+            <div class="sidebar-items">
+              <a href="explore.html" class="sidebar-item">
+                <i class="fa-solid fa-compass sidebar-icon"></i>
+                <span>Explore</span>
+              </a>
+              <a href="achievements.html" class="sidebar-item">
+                <i class="fa-solid fa-star sidebar-icon"></i>
+                <span>Achievements</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Account</h3>
+            <div class="sidebar-items">
+              <a href="profile.html" class="sidebar-item">
+                <i class="fa-solid fa-user sidebar-icon"></i>
+                <span>Profile</span>
+              </a>
+              <a href="settings.html" class="sidebar-item">
+                <i class="fa-solid fa-gear sidebar-icon"></i>
+                <span>Settings</span>
+              </a>
+              <a href="help.html" class="sidebar-item">
+                <i class="fa-solid fa-circle-question sidebar-icon"></i>
+                <span>Help & Support</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+         <!-- Buat sidebar jadi bs di toggle -->
+        <div class="sidebar-footer">
+          <button class="sidebar-collapse-btn" id="sidebar-toggle-visibility">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span class="sr-only">Collapse Sidebar</span>
+          </button>
+        </div>
+      </aside>
+      
+      <!-- Course Detail Content -->
+      <div class="course-detail-container">
+        <div class="course-breadcrumb">
+          <a href="courses.html" class="breadcrumb-link">My Courses</a>
+          <i class="fa-solid fa-chevron-right breadcrumb-separator"></i>
+          <span class="breadcrumb-current">Web Development Fundamentals</span>
+        </div>
+        
+        <div class="course-banner">
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=400&fit=crop" alt="Web Development Fundamentals" class="course-banner-image">
+          <div class="course-progress-overlay">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 75%"></div>
+            </div>
+            <span class="progress-text">75% Complete</span>
+          </div>
+        </div>
+        
+        <div class="course-info">
+          <div class="course-main-info">
+            <h1 class="course-title">Web Development Fundamentals</h1>
+            <p class="course-instructor">
+              <img src="https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icons.png" alt="Sarah Johnson" class="instructor-avatar">
+              By Sarah Johnson
+            </p>
+            <div class="course-meta">
+              <div class="meta-item">
+                <i class="fa-solid fa-signal"></i>
+                <span>Intermediate</span>
+              </div>
+              <div class="meta-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>16 hours</span>
+              </div>
+              <div class="meta-item">
+                <i class="fa-solid fa-calendar"></i>
+                <span>Last updated: May 10, 2023</span>
+              </div>
+              <div class="meta-item">
+                <i class="fa-solid fa-users"></i>
+                <span>2.5k students</span>
+              </div>
+              <div class="meta-item">
+                <i class="fa-solid fa-star"></i>
+                <span>4.8 (324 reviews)</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="course-actions">
+            <button class="btn btn-primary" onclick="window.open('https://www.youtube.com/watch?v=UB1O30fR-EE', '_blank')">
+              <i class="fa-solid fa-play"></i>
+              Continue Learning
+            </button>
+            <button class="btn btn-outline" onclick="downloadResources()">
+              <i class="fa-solid fa-download"></i>
+              Download Resources
+            </button>
+            <button class="btn btn-icon" title="Share Course" onclick="shareCourse()">
+              <i class="fa-solid fa-share"></i>
+            </button>
+            <button class="btn btn-icon" title="Bookmark Course" onclick="toggleBookmark()">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="course-content">
+          <div class="course-tabs">
+            <button class="course-tab active" data-tab="curriculum">
+              <i class="fa-solid fa-list"></i>
+              Curriculum
+            </button>
+            <button class="course-tab" data-tab="overview">
+              <i class="fa-solid fa-info-circle"></i>
+              Overview
+            </button>
+            <button class="course-tab" data-tab="resources">
+              <i class="fa-solid fa-folder"></i>
+              Resources
+            </button>
+            <button class="course-tab" data-tab="discussions">
+              <i class="fa-solid fa-comments"></i>
+              Discussions
+            </button>
+            <button class="course-tab" data-tab="notes">
+              <i class="fa-solid fa-sticky-note"></i>
+              My Notes
+            </button>
+          </div>
+          
+          <div class="tab-content active" id="curriculum-content">
+            <div class="curriculum-progress">
+              <div class="progress-summary">
+                <div class="progress-circle">
+                  <svg class="progress-ring" width="60" height="60">
+                    <circle class="progress-ring-circle" stroke="#e5e7eb" stroke-width="4" fill="transparent" r="26" cx="30" cy="30"/>
+                    <circle class="progress-ring-circle progress-ring-fill" stroke="#171717" stroke-width="4" fill="transparent" r="26" cx="30" cy="30" style="stroke-dasharray: 163.36; stroke-dashoffset: 40.84;"/>
+                  </svg>
+                  <span class="progress-percentage">75%</span>
+                </div>
+                <div class="progress-details">
+                  <h3>Course Progress</h3>
+                  <p>12 of 16 lessons completed</p>
+                  <p class="time-remaining">Estimated time remaining: 4 hours</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="curriculum-sections">
+              <div class="curriculum-section">
+                <div class="section-header" data-section="section-1">
+                  <div class="section-info">
+                    <i class="fa-solid fa-chevron-down section-toggle"></i>
+                    <div class="section-details">
+                      <h3 class="section-title">Section 1: Introduction to Web Development</h3>
+                      <div class="section-meta">
+                        <span class="section-progress">4/4 lessons</span>
+                        <span class="section-duration">1h 20m</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section-status completed">
+                    <i class="fa-solid fa-check-circle"></i>
+                    Completed
+                  </div>
+                </div>
+                
+                <div class="section-content" id="section-1">
+                  <div class="lesson-item completed">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">Welcome to the Course</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-video"></i>
+                          Video
+                        </span>
+                        <span class="lesson-duration">10:15</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" data-lesson="welcome" data-url="https://www.youtube.com/watch?v=UB1O30fR-EE">
+                        <i class="fa-solid fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="lesson-item completed">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">Understanding the Web</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-video"></i>
+                          Video
+                        </span>
+                        <span class="lesson-duration">15:30</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" data-lesson="understanding-web" data-url="https://www.youtube.com/watch?v=qz0aGYrrlhU">
+                        <i class="fa-solid fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="lesson-item completed">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">Setting Up Your Development Environment</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-video"></i>
+                          Video
+                        </span>
+                        <span class="lesson-duration">25:45</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" data-lesson="dev-environment" data-url="https://www.youtube.com/watch?v=SWYqp7iY_Tc">
+                        <i class="fa-solid fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="lesson-item completed">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">Section 1 Quiz</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-file-alt"></i>
+                          Quiz
+                        </span>
+                        <span class="lesson-duration">15 questions</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" data-lesson="section-1-quiz" onclick="alert('Quiz completed! Score: 85%')">
+                        <i class="fa-solid fa-clipboard-question"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="curriculum-section">
+                <div class="section-header" data-section="section-2">
+                  <div class="section-info">
+                    <i class="fa-solid fa-chevron-down section-toggle"></i>
+                    <div class="section-details">
+                      <h3 class="section-title">Section 2: HTML Fundamentals</h3>
+                      <div class="section-meta">
+                        <span class="section-progress">4/4 lessons</span>
+                        <span class="section-duration">2h 05m</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section-status completed">
+                    <i class="fa-solid fa-check-circle"></i>
+                    Completed
+                  </div>
+                </div>
+                
+                <div class="section-content" id="section-2">
+                  <div class="lesson-item completed">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">HTML Document Structure</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-video"></i>
+                          Video
+                        </span>
+                        <span class="lesson-duration">20:10</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" data-lesson="html-structure" data-url="https://www.youtube.com/watch?v=salY_Sm6mv4">
+                        <i class="fa-solid fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="lesson-item completed">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">HTML Elements and Attributes</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-video"></i>
+                          Video
+                        </span>
+                        <span class="lesson-duration">35:20</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" data-lesson="html-elements" data-url="https://www.youtube.com/watch?v=88PXJAA6szs">
+                        <i class="fa-solid fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="lesson-item completed">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">HTML Forms and Input Elements</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-video"></i>
+                          Video
+                        </span>
+                        <span class="lesson-duration">40:15</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" data-lesson="html-forms" data-url="https://www.youtube.com/watch?v=fNcJuPIZ2WE">
+                        <i class="fa-solid fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="lesson-item completed">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">Section 2 Quiz</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-file-alt"></i>
+                          Quiz
+                        </span>
+                        <span class="lesson-duration">10 questions</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" data-lesson="section-2-quiz" onclick="alert('Quiz completed! Score: 92%')">
+                        <i class="fa-solid fa-clipboard-question"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="curriculum-section">
+                <div class="section-header" data-section="section-3">
+                  <div class="section-info">
+                    <i class="fa-solid fa-chevron-down section-toggle"></i>
+                    <div class="section-details">
+                      <h3 class="section-title">Section 3: CSS Fundamentals</h3>
+                      <div class="section-meta">
+                        <span class="section-progress">4/4 lessons</span>
+                        <span class="section-duration">2h 30m</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section-status completed">
+                    <i class="fa-solid fa-check-circle"></i>
+                    Completed
+                  </div>
+                </div>
+                
+                <div class="section-content" id="section-3">
+                  <div class="lesson-item completed">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">CSS Selectors and Properties</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-video"></i>
+                          Video
+                        </span>
+                        <span class="lesson-duration">30:25</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" data-lesson="css-selectors" data-url="https://www.youtube.com/watch?v=1PnVor36_40">
+                        <i class="fa-solid fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="lesson-item completed">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">CSS Box Model</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-video"></i>
+                          Video
+                        </span>
+                        <span class="lesson-duration">25:40</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" data-lesson="css-box-model" data-url="https://www.youtube.com/watch?v=rIO5326FgPE">
+                        <i class="fa-solid fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="lesson-item completed">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">CSS Layout and Positioning</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-video"></i>
+                          Video
+                        </span>
+                        <span class="lesson-duration">45:15</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" data-lesson="css-layout" data-url="https://www.youtube.com/watch?v=jx5jmI0UlXU">
+                        <i class="fa-solid fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="lesson-item completed">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">Section 3 Quiz</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-file-alt"></i>
+                          Quiz
+                        </span>
+                        <span class="lesson-duration">12 questions</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" data-lesson="section-3-quiz" onclick="alert('Quiz completed! Score: 88%')">
+                        <i class="fa-solid fa-clipboard-question"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="curriculum-section">
+                <div class="section-header" data-section="section-4">
+                  <div class="section-info">
+                    <i class="fa-solid fa-chevron-down section-toggle"></i>
+                    <div class="section-details">
+                      <h3 class="section-title">Section 4: JavaScript Basics</h3>
+                      <div class="section-meta">
+                        <span class="section-progress">0/4 lessons</span>
+                        <span class="section-duration">3h 15m</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section-status in-progress">
+                    <i class="fa-solid fa-clock"></i>
+                    In Progress
+                  </div>
+                </div>
+                
+                <div class="section-content" id="section-4">
+                  <div class="lesson-item current">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-play-circle"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">JavaScript Syntax and Variables</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-video"></i>
+                          Video
+                        </span>
+                        <span class="lesson-duration">35:10</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" data-lesson="js-syntax" data-url="https://www.youtube.com/watch?v=W6NZfCO5SIk">
+                        <i class="fa-solid fa-play"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="lesson-item locked">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">JavaScript Functions and Events</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-video"></i>
+                          Video
+                        </span>
+                        <span class="lesson-duration">50:25</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" disabled onclick="alert('Complete previous lesson to unlock')">
+                        <i class="fa-solid fa-lock"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="lesson-item locked">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">DOM Manipulation</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-video"></i>
+                          Video
+                        </span>
+                        <span class="lesson-duration">55:30</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" disabled onclick="alert('Complete previous lessons to unlock')">
+                        <i class="fa-solid fa-lock"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div class="lesson-item locked">
+                    <div class="lesson-status">
+                      <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="lesson-info">
+                      <h4 class="lesson-title">Section 4 Quiz</h4>
+                      <div class="lesson-meta">
+                        <span class="lesson-type">
+                          <i class="fa-solid fa-file-alt"></i>
+                          Quiz
+                        </span>
+                        <span class="lesson-duration">15 questions</span>
+                      </div>
+                    </div>
+                    <div class="lesson-actions">
+                      <button class="lesson-btn" disabled onclick="alert('Complete all lessons to unlock quiz')">
+                        <i class="fa-solid fa-lock"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tab-content" id="overview-content">
+            <div class="overview-section">
+              <h3>Course Description</h3>
+              <p>This comprehensive course covers the fundamentals of web development, including HTML, CSS, and JavaScript. You'll learn how to build responsive websites from scratch and understand the core concepts that power the modern web.</p>
+              
+              <h3>What You'll Learn</h3>
+              <ul class="learning-objectives">
+                <li><i class="fa-solid fa-check"></i> HTML document structure and semantic markup</li>
+                <li><i class="fa-solid fa-check"></i> CSS styling, layout, and responsive design</li>
+                <li><i class="fa-solid fa-check"></i> JavaScript fundamentals and DOM manipulation</li>
+                <li><i class="fa-solid fa-check"></i> Best practices for web development</li>
+                <li><i class="fa-solid fa-check"></i> Building complete web projects</li>
+              </ul>
+              
+              <h3>Prerequisites</h3>
+              <p>No prior programming experience required. Basic computer literacy and familiarity with web browsers is helpful.</p>
+              
+              <h3>Course Requirements</h3>
+              <ul class="requirements">
+                <li>Computer with internet connection</li>
+                <li>Text editor (VS Code recommended)</li>
+                <li>Modern web browser</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="tab-content" id="resources-content">
+            <div class="resources-section">
+              <h3>Course Resources</h3>
+              <div class="resource-list">
+                <div class="resource-item">
+                  <i class="fa-solid fa-file-pdf"></i>
+                  <div class="resource-info">
+                    <h4>Course Slides</h4>
+                    <p>Complete presentation slides for all sections</p>
+                  </div>
+                  <button class="btn btn-outline btn-sm" onclick="downloadFile('course-slides.pdf')">Download</button>
+                </div>
+                <div class="resource-item">
+                  <i class="fa-solid fa-code"></i>
+                  <div class="resource-info">
+                    <h4>Source Code</h4>
+                    <p>All project files and code examples</p>
+                  </div>
+                  <button class="btn btn-outline btn-sm" onclick="downloadFile('source-code.zip')">Download</button>
+                </div>
+                <div class="resource-item">
+                  <i class="fa-solid fa-link"></i>
+                  <div class="resource-info">
+                    <h4>Useful Links</h4>
+                    <p>External resources and documentation</p>
+                  </div>
+                  <button class="btn btn-outline btn-sm" onclick="window.open('https://developer.mozilla.org/en-US/docs/Web', '_blank')">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tab-content" id="discussions-content">
+            <div class="discussions-section">
+              <h3>Course Discussions</h3>
+              <p>Join the conversation with fellow students and instructors.</p>
+              <button class="btn btn-primary" onclick="alert('Discussion feature coming soon!')">Start New Discussion</button>
+            </div>
+          </div>
+          
+          <div class="tab-content" id="notes-content">
+            <div class="notes-section">
+              <h3>My Notes</h3>
+              <p>Your personal notes for this course will appear here.</p>
+              <button class="btn btn-primary" onclick="alert('Notes feature coming soon!')">Add Note</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="script.js"></script>
+  <script>
+    // Course Detail-specific JavaScript
+    document.addEventListener("DOMContentLoaded", () => {
+      // Course tabs functionality
+      const courseTabs = document.querySelectorAll(".course-tab");
+      const tabContents = document.querySelectorAll(".tab-content");
+      
+      courseTabs.forEach((tab) => {
+        tab.addEventListener("click", function() {
+          const tabId = this.dataset.tab;
+          
+          // Remove active class from all tabs and content
+          courseTabs.forEach((t) => t.classList.remove("active"));
+          tabContents.forEach((content) => content.classList.remove("active"));
+          
+          // Add active class to clicked tab and corresponding content
+          this.classList.add("active");
+          document.getElementById(`${tabId}-content`).classList.add("active");
+        });
+      });
+      
+      // Section toggle functionality
+      const sectionHeaders = document.querySelectorAll(".section-header");
+      
+      sectionHeaders.forEach((header) => {
+        header.addEventListener("click", function() {
+          const sectionId = this.dataset.section;
+          const toggle = this.querySelector(".section-toggle");
+          const content = document.getElementById(sectionId);
+          
+          toggle.classList.toggle("collapsed");
+          content.classList.toggle("collapsed");
+          
+          if (toggle.classList.contains("collapsed")) {
+            toggle.classList.replace("fa-chevron-down", "fa-chevron-right");
+          } else {
+            toggle.classList.replace("fa-chevron-right", "fa-chevron-down");
+          }
+        });
+      });
+      
+      // Lesson play button functionality
+      const lessonButtons = document.querySelectorAll(".lesson-btn");
+      
+      lessonButtons.forEach((button) => {
+        button.addEventListener("click", function() {
+          if (!this.disabled) {
+            const videoUrl = this.dataset.url;
+            const lessonTitle = this.closest(".lesson-item").querySelector(".lesson-title").textContent;
+            
+            if (videoUrl) {
+              // Open YouTube video in new tab
+              window.open(videoUrl, '_blank');
+              
+              // Simulate lesson completion for demo
+              const lessonItem = this.closest(".lesson-item");
+              if (!lessonItem.classList.contains("completed")) {
+                setTimeout(() => {
+                  lessonItem.classList.add("completed");
+                  lessonItem.classList.remove("current");
+                  
+                  const status = lessonItem.querySelector(".lesson-status i");
+                  status.className = "fa-solid fa-circle-check";
+                }, 2000);
+              }
+            }
+          }
+        });
+      });
+    });
+
+    // Additional functionality functions
+    function downloadResources() {
+      alert('Downloading course resources...');
+      // Simulate download
+      setTimeout(() => {
+        alert('Resources downloaded successfully!');
+      }, 1500);
+    }
+
+    function shareCourse() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Web Development Fundamentals - SkillSync',
+          text: 'Check out this amazing course on SkillSync!',
+          url: window.location.href
+        });
+      } else {
+        // Fallback for browsers that don't support Web Share API
+        navigator.clipboard.writeText(window.location.href);
+        alert('Course link copied to clipboard!');
+      }
+    }
+
+    function toggleBookmark() {
+      const bookmarkBtn = document.querySelector('.btn-icon[title="Bookmark Course"] i');
+      if (bookmarkBtn.classList.contains('fa-regular')) {
+        bookmarkBtn.classList.replace('fa-regular', 'fa-solid');
+        alert('Course bookmarked!');
+      } else {
+        bookmarkBtn.classList.replace('fa-solid', 'fa-regular');
+        alert('Bookmark removed!');
+      }
+    }
+
+    function downloadFile(filename) {
+      alert(`Downloading ${filename}...`);
+      // Simulate file download
+      setTimeout(() => {
+        alert(`${filename} downloaded successfully!`);
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
