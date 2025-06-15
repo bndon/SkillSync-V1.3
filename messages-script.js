@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         conversations = [
           {
             name: "Alex Rodriguez",
-            avatar: "/Images/person-icon.png",
+            avatar: "https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png",
             status: "online",
             lastTime: "10:30 AM",
             messages: [
