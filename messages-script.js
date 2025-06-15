@@ -27,6 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentUserIndex = 0
     let conversations = JSON.parse(localStorage.getItem("conversations") || "[]")
     
+    const avatarFallback = "https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png"
+
+    conversations.forEach(conv => {
+      if (!conv.avatar || conv.avatar.includes("undefined") || conv.avatar === "") {
+        conv.avatar = avatarFallback
+      }
+    })
+
     if (conversations.length === 0) {
         conversations = [
           {
