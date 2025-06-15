@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           {
             name: "Sarah Johnson",
-            avatar: "/Images/person-icon.png",
+            avatar: "https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png",
             status: "offline",
             lastTime: "Yesterday",
             messages: [
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           {
             name: "Michael Chen",
-            avatar: "/Images/person-icon.png",
+            avatar: "https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png",
             status: "online",
             lastTime: "Yesterday",
             messages: [
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           {
             name: "Emily Parker",
-            avatar: "/Images/person-icon.png",
+            avatar: "https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png",
             status: "away",
             lastTime: "2 days ago",
             messages: [
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           {
             name: "David Wilson",
-            avatar: "/Images/person-icon.png",
+            avatar: "https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png",
             status: "offline",
             lastTime: "3 days ago",
             messages: [
@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         conversations.unshift({
           name,
-          avatar: "/Images/person-icon.png",
+          avatar: "https://raw.githubusercontent.com/bndon/SkillSync-V1.3/main/images/essentials/person-icon.png",
           status: "online",
           lastTime: time,
           messages: [{ from: "me", text: messageText, time }]
